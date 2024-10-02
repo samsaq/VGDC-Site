@@ -1,56 +1,26 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
-
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
-
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Make&nbsp;</span>
-        <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
-        <br />
-        <span className={title()}>
-          websites regardless of your design experience.
-        </span>
-        <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
-        </div>
-      </div>
-
-      <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
+    <>
+      <video
+        className="fixed top-0 left-0 w-full h-full object-cover filter blur-[1px]"
+        src="/example-background-video.mp4"
+        autoPlay
+        loop
+        muted
+      />
+      <section className="z-10 h-full relative flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+        <div className="flex flex-col items-center justify-center gap-4 bg-cyan-900 p-8 rounded-none">
+          <h1 className="text-4xl font-bold">
+            <span className="text-red-600">V</span>
+            <span className="text-yellow-500">G</span>
+            <span className="text-cyan-500">D</span>
+            <span className="text-teal-500">C</span>
+          </h1>
+          <span className="text-lg">
+            We are a community of gamers and developers
           </span>
-        </Snippet>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }
