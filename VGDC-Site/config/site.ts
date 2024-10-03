@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "The Video Game Development Club",
+  name: "Video Game Development Club",
   description:
     "We are a community of gamers and developers, we're also known as Heatwave Studio",
   navItems: [
