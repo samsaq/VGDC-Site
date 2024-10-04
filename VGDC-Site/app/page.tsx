@@ -72,7 +72,7 @@ export default function Home() {
           <span className="font-poppins text-3xl text-secondary-foreground">
             Video Game Development Club
           </span>
-          <span className="font-poppins pt-2 text-2xl font-bold text-primary">
+          <span className="font-poppins py-2 text-2xl font-bold text-primary">
             We make games
           </span>
           <div className="flex flex-row gap-4">
