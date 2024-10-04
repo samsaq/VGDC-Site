@@ -11,7 +11,7 @@ export default function Home() {
         autoPlay
         loop
         muted
-        className="fixed left-0 top-0 h-full w-full object-cover blur-[3px] filter"
+        className="fixed left-0 top-0 h-full w-full object-cover filter backdrop-blur-sm"
         src="/example-background-video.mp4"
       />
       <SocialMediaColumn
@@ -72,7 +72,7 @@ export default function Home() {
           <span className="font-poppins text-3xl text-secondary-foreground">
             Video Game Development Club
           </span>
-          <span className="font-poppins py-2 text-2xl font-bold text-primary">
+          <span className="py-2 font-poppins text-2xl font-bold text-primary">
             We make games
           </span>
           <div className="flex flex-row gap-4">
