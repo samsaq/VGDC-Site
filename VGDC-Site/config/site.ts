@@ -1,69 +1,44 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "VGDC ASU",
+  description:
+    "We are a community of gamers and developers at ASU, also known as Heatwave Studio. We release games yearly and learn new things.",
   navItems: [
     {
       label: "Home",
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "News",
+      href: "/news",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    },
-  ],
-  navMenuItems: [
-    {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
+      label: "Games",
+      href: "/games",
     },
     {
       label: "Team",
       href: "/team",
     },
+  ],
+  navMenuItems: [
     {
-      label: "Calendar",
-      href: "/calendar",
+      label: "News",
+      href: "/news",
     },
     {
-      label: "Settings",
-      href: "/settings",
+      label: "Games",
+      href: "/games",
     },
     {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
+      label: "Team",
+      href: "/team",
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
+    github: "https://github.com/samsaq",
     twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
     discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
   },
 };
