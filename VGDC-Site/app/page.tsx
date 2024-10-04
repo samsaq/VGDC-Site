@@ -2,6 +2,7 @@
 
 import { FillOnHoverButton } from "@/components/fillOnHoverButton";
 import { SwapOnHoverButton } from "@/components/swapOnHoverButton";
+import { SocialMediaColumn } from "@/components/socialMediaColumn";
 
 export default function Home() {
   return (
@@ -12,6 +13,53 @@ export default function Home() {
         muted
         className="fixed left-0 top-0 h-full w-full object-cover blur-[3px] filter"
         src="/example-background-video.mp4"
+      />
+      <SocialMediaColumn
+        icons={[
+          {
+            icon: "emojione-monotone:trident-emblem",
+            color: "#FEB95F",
+            hoverColor: "#2B4593",
+            href: "/",
+            iconSize: 40,
+          },
+          {
+            icon: "simple-icons:discord",
+            color: "#FEB95F",
+            hoverColor: "#2B4593",
+            href: "https://discord.gg/vgdcasu",
+            iconSize: 40,
+          },
+          {
+            icon: "hugeicons:instagram",
+            color: "#FEB95F",
+            hoverColor: "#2B4593",
+            href: "/",
+            iconSize: 40,
+          },
+          {
+            icon: "mage:tiktok-circle",
+            color: "#FEB95F",
+            hoverColor: "#2B4593",
+            href: "/",
+            iconSize: 40,
+          },
+          {
+            icon: "ri:twitter-x-fill",
+            color: "#FEB95F",
+            hoverColor: "#2B4593",
+            href: "/",
+            iconSize: 40,
+          },
+          {
+            icon: "mdi:at",
+            color: "#FEB95F",
+            hoverColor: "#2B4593",
+            href: "/about",
+            iconSize: 40,
+          },
+        ]}
+        position="top-right"
       />
       <section className="relative z-10 flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="flex flex-col items-center justify-center gap-0 rounded-none bg-secondary p-8 shadow-xl">
@@ -54,7 +102,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="flex flex-row items-center justify-center gap-4">
+        <div className="flex flex-row items-center justify-center gap-4 pt-3">
           <SwapOnHoverButton
             color="#2B4593"
             hoverColor="#FEB95F"
