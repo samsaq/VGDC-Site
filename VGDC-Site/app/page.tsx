@@ -3,6 +3,7 @@
 import { Icon } from "@iconify/react";
 
 import { FillOnHover } from "@/components/fillOnHover";
+import { FillOnHoverButton } from "@/components/fillOnHoverButton";
 
 export default function Home() {
   return (
@@ -40,6 +41,14 @@ export default function Home() {
                 <span className="text-white">News</span>
               </a>
             </FillOnHover>
+            <FillOnHoverButton
+              fillColor="#FEB95F"
+              href="/"
+              icon="emojione-monotone:newspaper"
+              iconColor="#FEB95F"
+              iconColorHover="#2B4593"
+              text="News"
+            />
           </div>
         </div>
       </section>
