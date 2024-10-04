@@ -1,9 +1,7 @@
 "use client";
 
-import { Icon } from "@iconify/react";
-
-import { FillOnHover } from "@/components/fillOnHover";
 import { FillOnHoverButton } from "@/components/fillOnHoverButton";
+import { SwapOnHoverButton } from "@/components/swapOnHoverButton";
 
 export default function Home() {
   return (
@@ -30,26 +28,45 @@ export default function Home() {
             We make games
           </span>
           <div className="flex flex-row gap-4">
-            <FillOnHover className="p-1" fillColor="#FEB95F">
-              <a className="flex flex-row items-center gap-2" href="/">
-                <Icon
-                  color="white"
-                  height={40}
-                  icon="emojione-monotone:newspaper"
-                  width={40}
-                />
-                <span className="text-white">News</span>
-              </a>
-            </FillOnHover>
             <FillOnHoverButton
-              fillColor="#FEB95F"
+              color="#DB504A"
+              fillColor="#DB504A"
+              hoverColor="#2B4593"
               href="/"
               icon="emojione-monotone:newspaper"
-              iconColor="#FEB95F"
-              iconColorHover="#2B4593"
               text="News"
             />
+            <FillOnHoverButton
+              color="#FEB95F"
+              fillColor="#FEB95F"
+              hoverColor="#2B4593"
+              href="/"
+              icon="game-icons:game-console"
+              text="Games"
+            />
+            <FillOnHoverButton
+              color="#2EC4B6"
+              fillColor="#2EC4B6"
+              hoverColor="#2B4593"
+              href="/"
+              icon="mage:robot-happy-fill"
+              text="Team"
+            />
           </div>
+        </div>
+        <div className="flex flex-row items-center justify-center gap-4">
+          <SwapOnHoverButton
+            color="#2B4593"
+            hoverColor="#FEB95F"
+            icon="emojione-monotone:trident-emblem"
+            text="ASU Sync Signup"
+          />
+          <SwapOnHoverButton
+            color="#2B4593"
+            hoverColor="#FEB95F"
+            icon="simple-icons:discord"
+            text="Join Our Discord"
+          />
         </div>
       </section>
     </>

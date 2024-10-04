@@ -6,8 +6,8 @@ import { FillOnHover } from "@/components/fillOnHover";
 interface FillOnHoverButtonProps {
   text: string;
   icon: string;
-  iconColor: string;
-  iconColorHover: string;
+  color: string;
+  hoverColor: string;
   fillColor: string;
   fillSpeed?: string;
   iconSize?: number;
@@ -19,8 +19,8 @@ interface FillOnHoverButtonProps {
 export const FillOnHoverButton = ({
   text,
   icon,
-  iconColor,
-  iconColorHover,
+  color,
+  hoverColor,
   fillColor,
   iconSize = 40,
   fillSpeed = "0.1s",
@@ -39,14 +39,14 @@ export const FillOnHoverButton = ({
       <FillOnHover fillColor={fillColor} fillSpeed={fillSpeed}>
         <a className="flex flex-row items-center gap-2 p-2" href={href}>
           <Icon
-            color={isHovered ? iconColorHover : iconColor}
+            color={isHovered ? hoverColor : color}
             height={iconSize}
             icon={icon}
             width={iconSize}
           />
           <span
             className={textClassName}
-            style={{ color: isHovered ? iconColorHover : iconColor }}
+            style={{ color: isHovered ? hoverColor : color }}
           >
             {text}
           </span>
