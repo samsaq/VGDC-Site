@@ -14,6 +14,7 @@ export default function Home() {
         className="fixed left-0 top-0 h-full w-full object-cover filter backdrop-blur-sm"
         src="/example-background-video.mp4"
       />
+      {/* Social Media Platforms- Youtube, Instagram, Twitter/X, Facebook, Tiktok, Sun Devil Sync, Discord */}
       <SocialMediaColumn
         icons={[
           {
