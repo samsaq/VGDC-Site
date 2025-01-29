@@ -15,6 +15,15 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         lato: ["Lato", "sans-serif"],
       },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateY(0) rotate(-15deg) scale(1.5)" },
+          "100%": { transform: "translateY(-50%) rotate(-15deg) scale(1.5)" },
+        },
+      },
+      animation: {
+        scrollingBg: "scroll 20s linear infinite",
+      },
     },
   },
   // VGDC Logo Themed Colors

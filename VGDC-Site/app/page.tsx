@@ -7,12 +7,14 @@ import { SocialMediaColumn } from "@/components/socialMediaColumn";
 export default function Home() {
   return (
     <>
-      <video
-        autoPlay
-        loop
-        muted
-        className="fixed left-0 top-0 h-full w-full object-cover filter backdrop-blur-sm"
-        src="/example-background-video.mp4"
+      <div
+        className="animate-scrollingBg fixed left-0 top-0 h-[200vh] w-full"
+        style={{
+          backgroundImage: 'url("/VGDC_Controller_Background_Image.png")',
+          backgroundSize: "600px",
+          backgroundRepeat: "repeat",
+          transform: "rotate(-25deg) scale(1.5)",
+        }}
       />
       {/* Social Media Platforms- Youtube, Instagram, Twitter/X, Facebook, Tiktok, Sun Devil Sync, Discord */}
       <SocialMediaColumn
