@@ -8,14 +8,22 @@ export default function Home() {
   return (
     <>
       <div
-        className="fixed left-0 top-0 h-[200vh] w-full animate-scrollingBg"
+        className="fixed left-[-25vh] top-[-25vh] h-[200vh] w-[200vw]"
         style={{
-          backgroundImage: 'url("/VGDC_Controller_Background_Image.png")',
-          backgroundSize: "600px",
-          backgroundRepeat: "repeat",
-          willChange: "transform",
+          transform: "rotate(-25deg) scale(1.5)",
+          transformOrigin: "center center",
         }}
-      />
+      >
+        <div
+          className="h-full w-full animate-scrollingBg"
+          style={{
+            backgroundImage: 'url("/VGDC_Controller_Background_Image.png")',
+            backgroundSize: "600px",
+            backgroundRepeat: "repeat",
+            willChange: "transform",
+          }}
+        />
+      </div>
       {/* Social Media Platforms- Youtube, Instagram, Twitter/X, Facebook, Tiktok, Sun Devil Sync, Discord */}
       <SocialMediaColumn
         icons={[
