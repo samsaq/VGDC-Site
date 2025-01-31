@@ -17,12 +17,12 @@ module.exports = {
       },
       keyframes: {
         scroll: {
-          "0%": { transform: "translateY(0) rotate(-15deg) scale(1.5)" },
-          "100%": { transform: "translateY(-50%) rotate(-15deg) scale(1.5)" },
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-600px)" },
         },
       },
       animation: {
-        scrollingBg: "scroll 20s linear infinite",
+        scrollingBg: "scroll 10s linear infinite",
       },
     },
   },

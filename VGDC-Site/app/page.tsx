@@ -8,12 +8,12 @@ export default function Home() {
   return (
     <>
       <div
-        className="animate-scrollingBg fixed left-0 top-0 h-[200vh] w-full"
+        className="fixed left-0 top-0 h-[200vh] w-full animate-scrollingBg"
         style={{
           backgroundImage: 'url("/VGDC_Controller_Background_Image.png")',
           backgroundSize: "600px",
           backgroundRepeat: "repeat",
-          transform: "rotate(-25deg) scale(1.5)",
+          willChange: "transform",
         }}
       />
       {/* Social Media Platforms- Youtube, Instagram, Twitter/X, Facebook, Tiktok, Sun Devil Sync, Discord */}
