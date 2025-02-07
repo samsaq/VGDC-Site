@@ -50,6 +50,7 @@ module.exports = {
             secondary: {
               DEFAULT: "#2B4593", // Marian Blue
               foreground: "#FFFFFF", // White
+              alternative: "#747474", // Gray
             },
             success: {
               DEFAULT: "#2EC4B6", // Light Sea Green
