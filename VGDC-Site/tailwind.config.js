@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
+        outfit: ["var(--font-outfit)"],
         poppins: ["Poppins", "sans-serif"],
         lato: ["Lato", "sans-serif"],
       },
