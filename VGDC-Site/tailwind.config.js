@@ -12,8 +12,18 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
+        outfit: ["var(--font-outfit)"],
         poppins: ["Poppins", "sans-serif"],
         lato: ["Lato", "sans-serif"],
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-600px)" },
+        },
+      },
+      animation: {
+        scrollingBg: "scroll 10s linear infinite",
       },
     },
   },
@@ -40,6 +50,7 @@ module.exports = {
             secondary: {
               DEFAULT: "#2B4593", // Marian Blue
               foreground: "#FFFFFF", // White
+              alternative: "#747474", // Gray
             },
             success: {
               DEFAULT: "#2EC4B6", // Light Sea Green
