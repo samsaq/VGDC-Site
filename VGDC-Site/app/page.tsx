@@ -27,7 +27,7 @@ export default function Home() {
         />
       </div>
       <section className="relative z-10 flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="bg-secondary-alternative flex flex-col items-center justify-center gap-0 rounded-[64px] p-8 shadow-2xl">
+        <div className="flex flex-col items-center justify-center gap-0 rounded-[64px] bg-secondary-alternative p-8 shadow-2xl">
           <h1 className="flex w-full flex-row justify-between py-4 text-9xl font-bold">
             <VGDCBanner characterSize={150} />
           </h1>
@@ -40,23 +40,23 @@ export default function Home() {
         </div>
         <div className="flex flex-row items-center justify-center gap-4 pt-3">
           <a href="/about">
-            <button className="bg-secondary-alternative rounded-full px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground">
+            <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground">
               <span>About Us</span>
             </button>
           </a>
           <a href="/officers">
-            <button className="bg-secondary-alternative rounded-full px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground">
+            <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground">
               <span>Officers</span>
             </button>
           </a>
 
           <a href="/teams">
-            <button className="bg-secondary-alternative rounded-full px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground">
+            <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground">
               <span>Teams</span>
             </button>
           </a>
           <a href="/games">
-            <button className="bg-secondary-alternative rounded-full px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground">
+            <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground">
               <span>Games</span>
             </button>
           </a>
