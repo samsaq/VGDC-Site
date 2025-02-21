@@ -1,5 +1,4 @@
 "use client";
-import { SocialMediaButtons } from "@/components/socialMediaButtons";
 import { VGDCBanner } from "@/components/VGDCBanner";
 import { Icon } from "@iconify/react";
 
@@ -38,14 +37,14 @@ export default function Home() {
         <div className="flex flex-row items-center justify-center gap-4 pt-3">
           <a href="/about">
             <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground shadow-xl">
-              <span className="hover:text-danger-alternative transition-colors duration-300">
+              <span className="transition-colors duration-300 hover:text-danger-alternative">
                 About Us
               </span>
             </button>
           </a>
           <a href="/officers">
             <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground shadow-xl">
-              <span className="hover:text-primary-alternative transition-colors duration-300">
+              <span className="transition-colors duration-300 hover:text-primary-alternative">
                 Officers
               </span>
             </button>
@@ -60,7 +59,7 @@ export default function Home() {
           </a>
           <a href="/games">
             <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground shadow-xl">
-              <span className="hover:text-success-alternative transition-colors duration-300">
+              <span className="transition-colors duration-300 hover:text-success-alternative">
                 Games
               </span>
             </button>
@@ -69,7 +68,7 @@ export default function Home() {
         <div className="flex flex-row items-center justify-center gap-2 rounded-full bg-secondary-alternative px-4 py-2">
           <a href="https://asu.campuslabs.com/engage/organization/vgdc">
             <button className="flex flex-row items-center justify-center rounded-full font-poppins text-2xl font-bold text-secondary-foreground">
-              <span className="hover:text-danger-alternative transition-colors duration-300">
+              <span className="transition-colors duration-300 hover:text-primary-alternative">
                 <Icon
                   icon="emojione-monotone:trident-emblem"
                   className="text-4xl"
@@ -144,14 +143,49 @@ export default function Home() {
           </a>
           <a href="/">
             <button className="flex flex-row items-center justify-center rounded-full font-poppins text-2xl font-bold text-secondary-foreground">
-              <span className="hover:text-danger-alternative transition-colors duration-300">
-                <Icon icon="mage:tiktok-circle" className="text-4xl" />
+              <span className="tiktok-hover relative text-4xl">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  className="absolute"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  className="gradient-icon opacity-0 transition-opacity duration-300"
+                >
+                  <defs>
+                    <linearGradient
+                      id="tiktok-gradient"
+                      x1="0%"
+                      y1="100%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stopColor="#00f2ea" />
+                      <stop offset="100%" stopColor="#ff0050" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    fill="url(#tiktok-gradient)"
+                    d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"
+                  />
+                </svg>
               </span>
             </button>
           </a>
           <a href="https://x.com/HeatwaveAZ">
             <button className="flex flex-row items-center justify-center rounded-full font-poppins text-2xl font-bold text-secondary-foreground">
-              <span className="hover:text-danger-alternative transition-colors duration-300">
+              <span className="transition-colors duration-300 hover:text-black">
                 <Icon icon="ri:twitter-x-fill" className="text-4xl" />
               </span>
             </button>
