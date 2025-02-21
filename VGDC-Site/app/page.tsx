@@ -24,20 +24,20 @@ export default function Home() {
       </div>
       <section className="relative z-10 flex h-full flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="flex flex-col items-center justify-center gap-0 rounded-[64px] bg-secondary-alternative p-8 shadow-2xl">
-          <h1 className="flex w-full flex-row justify-between py-4 text-9xl font-bold">
-            <VGDCBanner characterSize={150} />
+          <h1 className="flex w-full flex-row justify-center py-4 text-9xl font-bold">
+            <VGDCBanner />
           </h1>
-          <span className="font-poppins text-3xl text-secondary-foreground">
+          <span className="text-center font-poppins text-3xl text-secondary-foreground">
             Video Game Development Club
           </span>
-          <span className="py-2 font-poppins text-2xl font-bold text-primary">
+          <span className="py-2 text-center font-poppins text-2xl font-bold text-primary">
             We make games
           </span>
         </div>
-        <div className="flex flex-row items-center justify-center gap-4 pt-3">
+        <div className="flex flex-row flex-wrap items-center justify-center gap-4 pt-3 sm:flex-nowrap">
           <a href="/about">
             <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground shadow-xl">
-              <span className="transition-colors duration-300 hover:text-danger-alternative">
+              <span className="text-nowrap transition-colors duration-300 hover:text-danger-alternative">
                 About Us
               </span>
             </button>
@@ -49,7 +49,6 @@ export default function Home() {
               </span>
             </button>
           </a>
-
           <a href="/teams">
             <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground shadow-xl">
               <span className="transition-colors duration-300 hover:text-[#5ba8a0]">
@@ -79,7 +78,7 @@ export default function Home() {
           {/* Since there's too many platforms to match VGDC colors, using ones that match platforms (eg: Discord's blurple) */}
           <a href="https://discord.gg/vgdcasu">
             <button className="flex flex-row items-center justify-center rounded-full font-poppins text-2xl font-bold text-secondary-foreground">
-              <span className="transition-colors duration-300 hover:text-[#5865F2]">
+              <span className="transition-colors duration-300 hover:text-[#868ff7]">
                 <Icon icon="simple-icons:discord" className="text-4xl" />
               </span>
             </button>
@@ -143,7 +142,7 @@ export default function Home() {
           </a>
           <a href="/">
             <button className="flex flex-row items-center justify-center rounded-full font-poppins text-2xl font-bold text-secondary-foreground">
-              <span className="tiktok-hover relative text-4xl">
+              <span className="tiktok-hover relative -mx-2 -mr-3 text-4xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
