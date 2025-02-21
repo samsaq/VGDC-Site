@@ -11,3 +11,65 @@
   font-family: "Poppins";
   src: url("../public/fonts/Poppins/Poppins-Regular.ttf");
 }
+
+.instagram-hover {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+.instagram-hover svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.instagram-hover svg:first-child {
+  opacity: 1;
+}
+
+.instagram-hover svg.gradient-icon {
+  opacity: 0;
+}
+
+.instagram-hover:hover svg:first-child {
+  opacity: 0;
+}
+
+.instagram-hover:hover svg.gradient-icon {
+  opacity: 1;
+}
+
+.tiktok-hover {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+.tiktok-hover svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.tiktok-hover svg:first-child {
+  opacity: 1;
+}
+
+.tiktok-hover svg.gradient-icon {
+  opacity: 0;
+}
+
+.tiktok-hover:hover svg:first-child {
+  opacity: 0;
+}
+
+.tiktok-hover:hover svg.gradient-icon {
+  opacity: 1;
+}
