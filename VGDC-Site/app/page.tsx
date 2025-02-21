@@ -40,24 +40,32 @@ export default function Home() {
         </div>
         <div className="flex flex-row items-center justify-center gap-4 pt-3">
           <a href="/about">
-            <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground">
-              <span>About Us</span>
+            <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground shadow-xl">
+              <span className="hover:text-danger-alternative transition-colors duration-300">
+                About Us
+              </span>
             </button>
           </a>
           <a href="/officers">
-            <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground">
-              <span>Officers</span>
+            <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground shadow-xl">
+              <span className="hover:text-primary-alternative transition-colors duration-300">
+                Officers
+              </span>
             </button>
           </a>
 
           <a href="/teams">
-            <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground">
-              <span>Teams</span>
+            <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground shadow-xl">
+              <span className="transition-colors duration-300 hover:text-[#5ba8a0]">
+                Teams
+              </span>
             </button>
           </a>
           <a href="/games">
-            <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground">
-              <span>Games</span>
+            <button className="rounded-full bg-secondary-alternative px-4 py-2 font-poppins text-2xl font-bold text-secondary-foreground shadow-xl">
+              <span className="hover:text-success-alternative transition-colors duration-300">
+                Games
+              </span>
             </button>
           </a>
         </div>

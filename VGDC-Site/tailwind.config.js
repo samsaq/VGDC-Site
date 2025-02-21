@@ -46,6 +46,7 @@ module.exports = {
           colors: {
             primary: {
               DEFAULT: "#FEB95F", // Hunyadi Yellow
+              alternative: "#EA9232", // SVG Yellow
             },
             secondary: {
               DEFAULT: "#2B4593", // Marian Blue
@@ -54,12 +55,15 @@ module.exports = {
             },
             success: {
               DEFAULT: "#2EC4B6", // Light Sea Green
+              alternative: "#90C3A4", // SVG Light Green
             },
             warning: {
               DEFAULT: "#337CA0", // Cerulean Blue
+              alternative: "#3F746E", // SVG Teal
             },
             danger: {
               DEFAULT: "#DB504A", // Jasper Red
+              alternative: "#E1432A", //SVG Red
             },
           },
         },
