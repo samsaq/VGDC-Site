@@ -1,10 +1,7 @@
 "use client";
-
-import { FillOnHoverButton } from "@/components/fillOnHoverButton";
-import { SwapOnHoverButton } from "@/components/swapOnHoverButton";
 import { SocialMediaButtons } from "@/components/socialMediaButtons";
-import { RoundedHero } from "@/components/RoundedHero";
 import { VGDCBanner } from "@/components/VGDCBanner";
+import { Icon } from "@iconify/react";
 
 export default function Home() {
   return (
@@ -69,52 +66,48 @@ export default function Home() {
             </button>
           </a>
         </div>
+        <div className="flex flex-row items-center justify-center gap-2 rounded-full bg-secondary-alternative px-4 py-2">
+          <a href="https://asu.campuslabs.com/engage/organization/vgdc">
+            <button className="flex flex-row items-center justify-center rounded-full font-poppins text-2xl font-bold text-secondary-foreground">
+              <span className="hover:text-danger-alternative transition-colors duration-300">
+                <Icon
+                  icon="emojione-monotone:trident-emblem"
+                  className="text-4xl"
+                />
+              </span>
+            </button>
+          </a>
+          {/* Since there's too many platforms to match VGDC colors, using ones that match platforms (eg: Discord's blurple) */}
+          <a href="https://discord.gg/vgdcasu">
+            <button className="flex flex-row items-center justify-center rounded-full font-poppins text-2xl font-bold text-secondary-foreground">
+              <span className="transition-colors duration-300 hover:text-[#5865F2]">
+                <Icon icon="simple-icons:discord" className="text-4xl" />
+              </span>
+            </button>
+          </a>
+          <a href="https://www.instagram.com/heatwavestudioaz/">
+            <button className="flex flex-row items-center justify-center rounded-full font-poppins text-2xl font-bold text-secondary-foreground">
+              <span className="instagram-hover text-4xl">
+                <Icon icon="hugeicons:instagram" />
+              </span>
+            </button>
+          </a>
+          <a href="/">
+            <button className="flex flex-row items-center justify-center rounded-full font-poppins text-2xl font-bold text-secondary-foreground">
+              <span className="hover:text-danger-alternative transition-colors duration-300">
+                <Icon icon="mage:tiktok-circle" className="text-4xl" />
+              </span>
+            </button>
+          </a>
+          <a href="https://x.com/HeatwaveAZ">
+            <button className="flex flex-row items-center justify-center rounded-full font-poppins text-2xl font-bold text-secondary-foreground">
+              <span className="hover:text-danger-alternative transition-colors duration-300">
+                <Icon icon="ri:twitter-x-fill" className="text-4xl" />
+              </span>
+            </button>
+          </a>
+        </div>
       </section>
-      <div>
-        {/* Social Media Platforms- Youtube, Instagram, Twitter/X, Facebook, Tiktok, Sun Devil Sync, Discord */}
-        <SocialMediaButtons
-          direction="row"
-          icons={[
-            {
-              icon: "emojione-monotone:trident-emblem",
-              color: "#FEB95F",
-              hoverColor: "#2B4593",
-              href: "https://asu.campuslabs.com/engage/organization/vgdc",
-              iconSize: 20,
-            },
-            {
-              icon: "simple-icons:discord",
-              color: "#FEB95F",
-              hoverColor: "#2B4593",
-              href: "https://discord.gg/vgdcasu",
-              iconSize: 20,
-            },
-
-            {
-              icon: "hugeicons:instagram",
-              color: "#FEB95F",
-              hoverColor: "#2B4593",
-              href: "https://www.instagram.com/heatwavestudioaz/",
-              iconSize: 20,
-            },
-            {
-              icon: "mage:tiktok-circle",
-              color: "#FEB95F",
-              hoverColor: "#2B4593",
-              href: "/",
-              iconSize: 20,
-            },
-            {
-              icon: "ri:twitter-x-fill",
-              color: "#FEB95F",
-              hoverColor: "#2B4593",
-              href: "https://x.com/HeatwaveAZ",
-              iconSize: 20,
-            },
-          ]}
-          position="bottom-right"
-        />
-      </div>
     </>
   );
 }

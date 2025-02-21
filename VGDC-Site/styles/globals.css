@@ -11,3 +11,34 @@
   font-family: "Poppins";
   src: url("../public/fonts/Poppins/Poppins-Regular.ttf");
 }
+
+.instagram-hover {
+  transition: all 0.3s ease;
+}
+
+.instagram-hover svg {
+  transition: all 0.3s ease;
+}
+
+.instagram-hover:hover svg {
+  fill: url(#instagram-gradient);
+}
+
+@supports (background: paint(something)) {
+  .instagram-hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
