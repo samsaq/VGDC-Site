@@ -1,6 +1,24 @@
 {
-  "commit": "41dbe946c097ed994ebc1703303674604203c4b0",
-  "generated": "2025-03-07T18:31:13.386Z",
+  "commit": "bedcd1700a7741aa43991fb27d39bb37691abe48",
+  "generated": "2025-03-07T18:31:59.061Z",
   "metadata": [
+    {
+      "__outstatic": {
+        "commit": "bedcd1700a7741aa43991fb27d39bb37691abe48",
+        "hash": "2429970994",
+        "path": "outstatic/content/teams/marketing.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "teams",
+      "coverImage": "/images/hoji-frog-EwNz.jpg",
+      "description": "",
+      "publishedAt": "2025-03-07T17:49:38.549Z",
+      "slug": "marketing",
+      "status": "published",
+      "title": "Marketing"
+    }
   ]
 }
