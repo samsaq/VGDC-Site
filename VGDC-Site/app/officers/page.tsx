@@ -2,6 +2,15 @@ import { Navbar } from "@/components/navbar";
 import Image from 'next/image';
 export default function officers()
 {   
+    
+    function nextSlide()
+    {
+
+    }
+    function prevSlide()
+    {
+
+    }
     return(
         <div>{/*Page container */}
              <Navbar/>
