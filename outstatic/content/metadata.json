@@ -1,6 +1,6 @@
 {
-  "commit": "f9acbadb45559b2d5dc0b01c4c73948a4c23bbe9",
-  "generated": "2025-03-07T22:27:12.851Z",
+  "commit": "cea76f39f8158121780b55a3be1a48fabbe36b4b",
+  "generated": "2025-03-07T22:27:29.645Z",
   "metadata": [
     {
       "__outstatic": {
@@ -91,6 +91,24 @@
       "slug": "design",
       "status": "published",
       "title": "Design"
+    },
+    {
+      "__outstatic": {
+        "commit": "cea76f39f8158121780b55a3be1a48fabbe36b4b",
+        "hash": "432325455",
+        "path": "outstatic/content/teams/sound.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "teams",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2025-03-07T21:45:16.944Z",
+      "slug": "sound",
+      "status": "published",
+      "title": "Sound"
     }
   ]
 }
