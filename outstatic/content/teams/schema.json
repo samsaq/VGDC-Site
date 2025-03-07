@@ -1,0 +1,13 @@
+{
+  "title": "teams",
+  "type": "object",
+  "properties": {
+    "name": {
+      "required": true,
+      "description": "",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "Name"
+    }
+  }
+}
