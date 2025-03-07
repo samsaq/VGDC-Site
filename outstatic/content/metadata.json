@@ -1,6 +1,6 @@
 {
-  "commit": "bedcd1700a7741aa43991fb27d39bb37691abe48",
-  "generated": "2025-03-07T18:31:59.061Z",
+  "commit": "6b19a6a7032fcb4db99357c1280692482bf3ddda",
+  "generated": "2025-03-07T21:49:01.713Z",
   "metadata": [
     {
       "__outstatic": {
@@ -19,6 +19,24 @@
       "slug": "marketing",
       "status": "published",
       "title": "Marketing"
+    },
+    {
+      "__outstatic": {
+        "commit": "6b19a6a7032fcb4db99357c1280692482bf3ddda",
+        "hash": "2688850827",
+        "path": "outstatic/content/teams/art.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "teams",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2025-03-07T21:06:45.087Z",
+      "slug": "art",
+      "status": "published",
+      "title": "Art"
     }
   ]
 }
