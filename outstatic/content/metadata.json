@@ -1,6 +1,6 @@
 {
-  "commit": "466a2f09f5be39ea4da35ea1187e65780cb725ee",
-  "generated": "2025-03-07T22:26:51.649Z",
+  "commit": "f9acbadb45559b2d5dc0b01c4c73948a4c23bbe9",
+  "generated": "2025-03-07T22:27:12.851Z",
   "metadata": [
     {
       "__outstatic": {
@@ -73,6 +73,24 @@
       "slug": "narrative",
       "status": "published",
       "title": "Narrative"
+    },
+    {
+      "__outstatic": {
+        "commit": "f9acbadb45559b2d5dc0b01c4c73948a4c23bbe9",
+        "hash": "3783461049",
+        "path": "outstatic/content/teams/design.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "teams",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2025-03-07T21:45:03.327Z",
+      "slug": "design",
+      "status": "published",
+      "title": "Design"
     }
   ]
 }
