@@ -8,9 +8,7 @@ export default function ContentLayout({
   return (
     <>
       <VGDCnavbar />
-      <div className="container mx-auto max-w-7xl flex-grow px-6">
-        {children}
-      </div>
+      <div className="container mx-auto max-w-7xl flex-grow">{children}</div>
     </>
   );
 }

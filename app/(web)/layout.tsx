@@ -51,7 +51,7 @@ export default function RootLayout({
           }}
         >
           <div className="relative flex h-screen flex-col">
-            <main className="container mx-auto flex-grow px-6">{children}</main>
+            <main className="container w-full flex-grow">{children}</main>
           </div>
         </Providers>
       </body>
