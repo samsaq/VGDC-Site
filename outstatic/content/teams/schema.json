@@ -8,6 +8,13 @@
       "fieldType": "String",
       "dataType": "string",
       "title": "Name"
+    },
+    "description": {
+      "required": true,
+      "description": "",
+      "fieldType": "Text",
+      "dataType": "string",
+      "title": "Description"
     }
   }
 }
