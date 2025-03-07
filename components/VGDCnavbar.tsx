@@ -66,7 +66,7 @@ export const VGDCnavbar = () => {
             href="/about"
           >
             About
-            <span className="absolute -bottom-1 left-0 h-1 w-0 bg-danger-alternative transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 h-1 w-0 bg-danger-alternative transition-all duration-300 ease-in-out group-hover:w-full" />
           </NextLink>
         </NavbarItem>
         <NavbarItem>
@@ -78,7 +78,7 @@ export const VGDCnavbar = () => {
             href="/officers"
           >
             Officers
-            <span className="absolute -bottom-1 left-0 h-1 w-0 bg-primary-alternative transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 h-1 w-0 bg-primary-alternative transition-all duration-300 ease-in-out group-hover:w-full" />
           </NextLink>
         </NavbarItem>
         <NavbarItem>
@@ -90,7 +90,7 @@ export const VGDCnavbar = () => {
             href="/teams"
           >
             Teams
-            <span className="absolute -bottom-1 left-0 h-1 w-0 bg-warning-alternative transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 h-1 w-0 bg-warning-alternative transition-all duration-300 ease-in-out group-hover:w-full" />
           </NextLink>
         </NavbarItem>
         <NavbarItem>
@@ -102,7 +102,7 @@ export const VGDCnavbar = () => {
             href="/games"
           >
             Games
-            <span className="absolute -bottom-1 left-0 h-1 w-0 bg-success-alternative transition-all duration-300 ease-in-out group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 h-1 w-0 bg-success-alternative transition-all duration-300 ease-in-out group-hover:w-full" />
           </NextLink>
         </NavbarItem>
       </NavbarContent>
