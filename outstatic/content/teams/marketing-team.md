@@ -1,6 +1,6 @@
 ---
 title: 'Marketing Team'
-status: 'draft'
+status: 'published'
 author:
   name: 'samsaq'
   picture: 'https://avatars.githubusercontent.com/u/8010506?v=4'
