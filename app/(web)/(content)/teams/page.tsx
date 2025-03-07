@@ -1,18 +1,8 @@
-import { load } from "outstatic/server";
+import { getDocuments } from "outstatic/server";
 
 async function getTeamsData() {
-  const db = await load();
-  const teams = db
-    .find({
-      collection: "teams",
-    })
-    .sort({
-      title: 1,
-    })
-    .toArray();
-
-  console.log(teams);
-
+  const teams = getDocuments("teams", ["title", "content", "coverImage"]);
+  console.log("Teams data:", teams);
   return teams;
 }
 
