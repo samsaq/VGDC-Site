@@ -45,16 +45,18 @@ export default function Teams() {
         <p>Loading teams...</p>
       ) : (
         <div className="flex w-full flex-row">
-          <SideNav
-            items={teams.map((team) => ({
-              label: team.title,
-              href: `#${team.title}`,
-            }))}
-            onItemSelect={setSelectedTeam}
-            defaultSelected={teams[0]?.title}
-          />
+          <div className="flex min-w-[25%]">
+            <SideNav
+              items={teams.map((team) => ({
+                label: team.title,
+                href: `#${team.title}`,
+              }))}
+              onItemSelect={setSelectedTeam}
+              defaultSelected={teams[0]?.title}
+            />
+          </div>
 
-          <div className="flex-1 p-4">
+          <div className="w-full flex-1 p-4">
             {currentTeam ? (
               <div>
                 <h2>{currentTeam.title}</h2>

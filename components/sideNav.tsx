@@ -31,43 +31,37 @@ export const SideNav: React.FC<SideNavProps> = ({
   };
 
   return (
-    <nav className="flex h-full min-w-fit max-w-xs flex-col justify-items-start gap-0 text-3xl">
+    <nav className="overflow-y-aut flex h-full w-full flex-col justify-items-start gap-0 text-3xl">
       {sortedItems.map((item, index) => (
-        <div key={item.label} className="relative">
-          {/* Divider line (not for first item) */}
-          {index > 0 && (
-            <div className="absolute -top-px left-0 right-0 mx-auto flex justify-center">
-              <div className="h-0.5 w-[80%] bg-black/40" />
-            </div>
-          )}
-
-          <button
-            onClick={() => handleItemClick(item.label)}
-            className="group relative w-full flex-1 p-6 px-12 text-center"
+        <button
+          key={item.label}
+          onClick={() => handleItemClick(item.label)}
+          className={`group relative w-full flex-1 p-6 px-12 text-center ${
+            index !== sortedItems.length - 1 ? "border-b-1 border-black" : "" //so the last item doesn't have a border
+          }`}
+          style={{
+            transition: "all 0.3s ease-in-out",
+          }}
+        >
+          <span
+            className="absolute inset-0 left-0 w-0 group-hover:w-full"
             style={{
-              transition: "all 0.3s ease-in-out",
+              backgroundColor: colorOnHover,
+              transition: "width 0.3s ease-in-out",
+              width: selectedItem === item.label ? "100%" : "0",
+              zIndex: -1,
+            }}
+          />
+          <span
+            className="relative z-10"
+            style={{
+              color: selectedItem === item.label ? "white" : "inherit",
+              transition: "color 0.3s ease-in-out",
             }}
           >
-            <span
-              className="absolute inset-0 left-0 w-0 group-hover:w-full"
-              style={{
-                backgroundColor: colorOnHover,
-                transition: "width 0.3s ease-in-out",
-                width: selectedItem === item.label ? "100%" : "0",
-                zIndex: -1,
-              }}
-            />
-            <span
-              className="relative z-10"
-              style={{
-                color: selectedItem === item.label ? "white" : "inherit",
-                transition: "color 0.3s ease-in-out",
-              }}
-            >
-              {item.label}
-            </span>
-          </button>
-        </div>
+            {item.label}
+          </span>
+        </button>
       ))}
     </nav>
   );
