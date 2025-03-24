@@ -1,8 +1,13 @@
+"use client"
 import { Navbar } from "@/components/navbar";
 import Image from 'next/image';
+import EmblaCarousel from '@/components/EmblaCarousel'
+import { EmblaOptionsType } from 'embla-carousel'
 export default function officers()
 {   
-    
+    const OPTIONS: EmblaOptionsType = {}
+    const SLIDE_COUNT = 5
+    const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
     function nextSlide()
     {
 
@@ -17,10 +22,7 @@ export default function officers()
              <div>{/*Non navbar container*/}
                 <div>
                 <div className="w-3/5 overflow-hidden flex justify-center items-center">
-                    <img
-                    src="filler_image.jpg"
-                    className="w-full max-w-[500px] aspect-square object-cover rounded-lg"
-                    />
+                    <EmblaCarousel slides={SLIDES} options={OPTIONS} />
                 </div>
 
                     <div className="w-1/10 flex justify-center py-10">{/*select line container*/}
