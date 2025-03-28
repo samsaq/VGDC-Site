@@ -1,11 +1,12 @@
+"use client";
 import React from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons
-} from '@/components/carouselButtons'
-import { useEmblaCarousel } from 'embla-carousel-react'
+} from './carouselButtons'
+import useEmblaCarousel from 'embla-carousel-react'
 
 type PropType = {
   slides: number[]

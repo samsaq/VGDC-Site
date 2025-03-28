@@ -1,28 +1,36 @@
-"use client"
+"use client";
 import { Navbar } from "@/components/navbar";
-import Image from 'next/image';
-import EmblaCarousel from '@/components/EmblaCarousel'
-import { EmblaOptionsType } from 'embla-carousel'
+import EmblaCarousel from "@/components/EmblaCarousel";
+import { EmblaOptionsType } from "embla-carousel";
+import { useCallback, useState, useEffect } from "react";
 export default function officers()
 {   
-    const OPTIONS: EmblaOptionsType = {}
-    const SLIDE_COUNT = 5
-    const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-    function nextSlide()
-    {
-
-    }
-    function prevSlide()
-    {
-
-    }
+    const OPTIONS: EmblaOptionsType = {};
+    const SLIDE_COUNT = 10;
+    const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+  
+    const [emblaApi, setEmblaApi] = useState<any>(null);
+  
+    useEffect(() => {
+      if (emblaApi) {
+        emblaApi.reInit();
+      }
+    }, [emblaApi]);
+  
+    const nextSlide = useCallback(() => {
+      if (emblaApi) emblaApi.scrollNext();
+    }, [emblaApi]);
+  
+    const prevSlide = useCallback(() => {
+      if (emblaApi) emblaApi.scrollPrev();
+    }, [emblaApi]);
     return(
         <div>{/*Page container */}
              <Navbar/>
              <div>{/*Non navbar container*/}
                 <div>
                 <div className="w-3/5 overflow-hidden flex justify-center items-center">
-                    <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+                    <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
                 </div>
 
                     <div className="w-1/10 flex justify-center py-10">{/*select line container*/}
