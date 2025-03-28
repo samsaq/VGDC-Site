@@ -1,20 +1,44 @@
+"use client";
 import { Navbar } from "@/components/navbar";
+import EmblaCarousel from "@/components/EmblaCarousel";
+import { EmblaOptionsType } from "embla-carousel";
+import { useCallback, useState, useEffect } from "react";
 export default function officers()
 {   
+    const OPTIONS: EmblaOptionsType = {};
+    const SLIDE_COUNT = 10;
+    const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+  
+    const [emblaApi, setEmblaApi] = useState<any>(null);
+  
+    useEffect(() => {
+      if (emblaApi) {
+        emblaApi.reInit();
+      }
+    }, [emblaApi]);
+  
+    const nextSlide = useCallback(() => {
+      if (emblaApi) emblaApi.scrollNext();
+    }, [emblaApi]);
+  
+    const prevSlide = useCallback(() => {
+      if (emblaApi) emblaApi.scrollPrev();
+    }, [emblaApi]);
     return(
         <div>{/*Page container */}
-             <h1> OFFICERS </h1>
+             <Navbar/>
              <div>{/*Non navbar container*/}
                 <div>
-                    <div>{/*Image container slider container*/}
+                <div className="w-3/5 overflow-hidden flex justify-center items-center">
+                    <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
+                </div>
 
+                    <div className="w-1/10 flex justify-center py-10">{/*select line container*/}
+                        <div className="h-[4px] w-[150px] bg-orange-400"></div>
                     </div>
-                    <div>{/*select line container*/}
-
-                    </div>
-                    <div className="font-outfit flex">{/*triple split container*/}
-                        <div className="w-1/3 text-orange-500">{/*caption header */}
-                            <h1 className="text-5xl">Meet our club officers</h1>
+                    <div className="w-3/10 font-outfit flex">{/*triple split container*/}
+                        <div className="w-1/3 text-orange-400">{/*caption header */}
+                            <strong className="text-6xl">Meet our club officers</strong>
                         </div>
                         <div className="w-1/3">
                             <div>
@@ -24,11 +48,11 @@ export default function officers()
                             Lorem ipsum dolor sit amet consectetur adipiscing elit volutpat gravida malesuada quam commodo id integer nam.
                             </h1>
                         </div>
-                        <div className="w-1/3 flex justify-start space-x-4">
-                            <button className="bg-secondary-alternative rounded-full px-8 py-6 text-2xl text-secondary-foreground">
-                                <span> &lt; </span>
+                        <div className="w-1/3 flex justify-center px-2 space-x-4">
+                            <button className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl">
+                                <span>&lt;</span>
                             </button>
-                            <button className="bg-secondary-alternative rounded-full px-8 py-6 text-2xl text-secondary-foreground">
+                            <button className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl">
                                 <span className="text-light"> &gt; </span>
                             </button>
                         </div>
