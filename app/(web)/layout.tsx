@@ -32,7 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
@@ -49,9 +51,7 @@ export default function RootLayout({
           }}
         >
           <div className="relative flex h-screen flex-col">
-            <main className="container mx-auto max-w-7xl flex-grow px-6">
-              {children}
-            </main>
+            <main className="container min-w-full flex-grow">{children}</main>
           </div>
         </Providers>
       </body>
