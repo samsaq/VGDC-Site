@@ -10,4 +10,10 @@ coverImage: '/images/hoji-frog-EwNz.jpg'
 publishedAt: '2025-03-07T17:49:38.549Z'
 ---
 
-Team does team things
+## What do we do?
+
+We do many things
+
+### What's with the sonic everywhere?
+
+idk
