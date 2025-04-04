@@ -1,6 +1,6 @@
 {
-  "commit": "cea76f39f8158121780b55a3be1a48fabbe36b4b",
-  "generated": "2025-03-07T22:27:29.645Z",
+  "commit": "d405e6fe852b3942ada4af4c51c7b5b47a15244e",
+  "generated": "2025-04-04T16:36:47.905Z",
   "metadata": [
     {
       "__outstatic": {
@@ -109,6 +109,24 @@
       "slug": "sound",
       "status": "published",
       "title": "Sound"
+    },
+    {
+      "__outstatic": {
+        "commit": "d405e6fe852b3942ada4af4c51c7b5b47a15244e",
+        "hash": "1284413580",
+        "path": "outstatic/content/about/who-we-are.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "about",
+      "coverImage": "/images/filler-image-cwNT.jpg",
+      "description": "About page for VGDC",
+      "publishedAt": "2025-04-04T15:51:36.544Z",
+      "slug": "who-we-are",
+      "status": "draft",
+      "title": "Who We Are"
     }
   ]
 }
