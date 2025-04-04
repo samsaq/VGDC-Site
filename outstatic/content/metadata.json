@@ -1,6 +1,6 @@
 {
-  "commit": "bde47682cc2720d25cdc4ccd8a6b8f67a2f37857",
-  "generated": "2025-04-04T22:18:44.284Z",
+  "commit": "57f7b3380dd44a90fec6b41302076297ddb9f71b",
+  "generated": "2025-04-04T22:50:08.343Z",
   "metadata": [
     {
       "__outstatic": {
@@ -112,8 +112,8 @@
     },
     {
       "__outstatic": {
-        "commit": "bde47682cc2720d25cdc4ccd8a6b8f67a2f37857",
-        "hash": "1132435985",
+        "commit": "57f7b3380dd44a90fec6b41302076297ddb9f71b",
+        "hash": "1451531767",
         "path": "outstatic/content/teams/marketing.md"
       },
       "author": {
