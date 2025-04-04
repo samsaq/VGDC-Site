@@ -37,44 +37,47 @@ export default function Teams() {
   // Find the currently selected team
   const currentTeam = teams.find((team) => team.title === selectedTeam);
 
+  const renderContent = () => {
+    if (loading) {
+      return <p>Loading teams...</p>;
+    }
+
+    if (!currentTeam) {
+      return <p>No team selected</p>;
+    }
+
+    return (
+      <div>
+        <h2>{currentTeam.title}</h2>
+        <p>{currentTeam.content}</p>
+        {currentTeam.coverImage && (
+          <img
+            src={currentTeam.coverImage}
+            alt={currentTeam.title}
+            className="aspect-auto max-w-64"
+          />
+        )}
+      </div>
+    );
+  };
+
   return (
-    <section className="relative z-10 flex h-full w-full flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <h1 className="text-4xl font-bold">Teams</h1>
+    <section className="relative z-10 flex h-full w-full flex-row overflow-hidden">
+      <div className="flex h-full min-w-[25%]">
+        <SideNav
+          items={teams.map((team) => ({
+            label: team.title,
+            href: `#${team.title}`,
+          }))}
+          onItemSelect={setSelectedTeam}
+          defaultSelected={teams[0]?.title}
+        />
+      </div>
 
-      {loading ? (
-        <p>Loading teams...</p>
-      ) : (
-        <div className="flex w-full flex-row">
-          <div className="flex min-w-[25%]">
-            <SideNav
-              items={teams.map((team) => ({
-                label: team.title,
-                href: `#${team.title}`,
-              }))}
-              onItemSelect={setSelectedTeam}
-              defaultSelected={teams[0]?.title}
-            />
-          </div>
-
-          <div className="w-full flex-1 p-4">
-            {currentTeam ? (
-              <div>
-                <h2>{currentTeam.title}</h2>
-                <p>{currentTeam.content}</p>
-                {currentTeam.coverImage && (
-                  <img
-                    src={currentTeam.coverImage}
-                    alt={currentTeam.title}
-                    className="aspect-auto max-w-64"
-                  />
-                )}
-              </div>
-            ) : (
-              <p>No team selected</p>
-            )}
-          </div>
-        </div>
-      )}
+      <div className="flex flex-1 flex-col overflow-auto p-4">
+        <h1 className="py-4 text-center text-4xl font-bold">Teams</h1>
+        {renderContent()}
+      </div>
     </section>
   );
 }

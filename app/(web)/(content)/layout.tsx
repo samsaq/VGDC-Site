@@ -6,11 +6,9 @@ export default function ContentLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <div className="flex h-screen flex-col">
       <VGDCnavbar />
-      <div className="container min-h-full min-w-full flex-grow">
-        {children}
-      </div>
-    </>
+      <div className="flex-1 overflow-hidden">{children}</div>
+    </div>
   );
 }

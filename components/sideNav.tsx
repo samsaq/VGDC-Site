@@ -31,7 +31,7 @@ export const SideNav: React.FC<SideNavProps> = ({
   };
 
   return (
-    <nav className="overflow-y-aut flex h-full w-full flex-col justify-items-start gap-0 text-3xl">
+    <nav className="flex h-full w-full flex-col justify-items-start gap-0 overflow-y-auto text-3xl">
       {sortedItems.map((item, index) => (
         <button
           key={item.label}
