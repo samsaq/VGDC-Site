@@ -1,4 +1,3 @@
-"use client";
 import React from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import {
@@ -7,7 +6,7 @@ import {
   usePrevNextButtons
 } from './carouselButtons'
 import useEmblaCarousel from 'embla-carousel-react'
-
+import "@/components/embla.css"
 type PropType = {
   slides: number[]
   options?: EmblaOptionsType
@@ -26,7 +25,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   return (
     <section className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
+      <div className="overflow-hidden" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((index) => (
             <div className="embla__slide" key={index}>
@@ -36,8 +35,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         </div>
       </div>
 
-      <div className="embla__controls">
-        <div className="embla__buttons">
+      <div className="w-1/3 flex justify-end px-2 space-x-4">
+        <div className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>

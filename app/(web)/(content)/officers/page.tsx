@@ -1,8 +1,12 @@
 "use client";
-import { Navbar } from "@/components/navbar";
 import EmblaCarousel from "@/components/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
 import { useCallback, useState, useEffect } from "react";
+import {
+    PrevButton,
+    NextButton,
+    usePrevNextButtons
+  } from '@/components/carouselButtons'
 export default function officers()
 {   
     const OPTIONS: EmblaOptionsType = {};
@@ -24,15 +28,14 @@ export default function officers()
     const prevSlide = useCallback(() => {
       if (emblaApi) emblaApi.scrollPrev();
     }, [emblaApi]);
+    
     return(
         <div>{/*Page container */}
-             <Navbar/>
              <div>{/*Non navbar container*/}
                 <div>
-                <div className="w-3/5 overflow-hidden flex justify-center items-center">
+                <div className="w-full max-w-[800px] h-auto overflow-hidden flex justify-center items-center mx-auto">
                     <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
                 </div>
-
                     <div className="w-1/10 flex justify-center py-10">{/*select line container*/}
                         <div className="h-[4px] w-[150px] bg-orange-400"></div>
                     </div>
