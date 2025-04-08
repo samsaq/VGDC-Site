@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-
+import { getAboutData } from "@/lib/actions";
 interface About {
     title: string;
     content: string;
@@ -9,8 +9,24 @@ interface About {
 export default function About()
 {
     const [about, setAbout] = useState("");
+    useEffect(() => {
+        async function fetchAbout()
+        {
+            try
+            {
+                const data = await getAboutData();
+                {
+
+                }
+            }
+            catch(error)
+            {
+                console.error("Error fetch about page", error);
+            }
+        }
+    }, []);
     return(
-        <div className="margin=0 padding=0"> {/* Page container*/}
+        <div className="margin=0 p-5"> {/* Page container*/}
             <div>{/*Non-header container*/}
                 <div className="flex items-center justify-center pt-20 pb-10">{/* Title Container*/}
                     <h1 className="font-outfit font-bold text-4xl text-red-600"> 
