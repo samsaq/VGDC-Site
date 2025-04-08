@@ -1,6 +1,14 @@
 "use client";
+import { useState, useEffect } from "react";
+
+interface About {
+    title: string;
+    content: string;
+    coverImage?: string;
+  }
 export default function About()
 {
+    const [about, setAbout] = useState("");
     return(
         <div className="margin=0 padding=0"> {/* Page container*/}
             <div>{/*Non-header container*/}
