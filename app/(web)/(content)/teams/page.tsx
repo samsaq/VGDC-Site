@@ -65,6 +65,14 @@ export default function Teams() {
           content: "",
         };
         processedContent.push(currentSection);
+      } else if (line.startsWith("#") && !line.startsWith("##")) {
+        // Create a new h1 section
+        currentSection = {
+          header: line.slice(1).trim(),
+          headerType: "h1",
+          content: "",
+        };
+        processedContent.push(currentSection);
       } else if (currentSection && line.trim() !== "") {
         // Add non-empty lines to the current section's content up till the next header
         currentSection.content += (currentSection.content ? "\n" : "") + line;
@@ -87,8 +95,8 @@ export default function Teams() {
     const processedSections = processContent(currentTeam.content);
 
     return (
-      <div className="flex w-full flex-col items-center">
-        <div className="mb-8 flex w-full flex-row items-start justify-evenly gap-6 px-8">
+      <div className="flex h-full w-full flex-col items-center overflow-y-auto">
+        <div className="mb-4 flex w-full flex-row items-start justify-evenly gap-6 px-8">
           <div className="flex flex-col items-start">
             <h2 className="mb-2 w-full text-center text-2xl font-bold text-warning-alternative">
               {currentTeam.title}
@@ -96,7 +104,13 @@ export default function Teams() {
             {processedSections.length > 0 && (
               <div>
                 <h3
-                  className={`text-xl ${processedSections[0].headerType === "h2" ? "font-bold" : "font-semibold"} mb-1`}
+                  className={`${
+                    processedSections[0].headerType === "h1"
+                      ? "text-2xl font-bold"
+                      : processedSections[0].headerType === "h2"
+                        ? "text-xl font-bold"
+                        : "text-lg font-semibold"
+                  } mb-1`}
                 >
                   {processedSections[0].header}
                 </h3>
@@ -108,7 +122,7 @@ export default function Teams() {
             <img
               src={currentTeam.coverImage}
               alt={currentTeam.title}
-              className="aspect-square w-64"
+              className="aspect-square w-64 rounded-2xl"
             />
           )}
         </div>
@@ -119,7 +133,13 @@ export default function Teams() {
             {processedSections.slice(1).map((section, index) => (
               <div key={index} className="mb-6">
                 <h3
-                  className={`${section.headerType === "h2" ? "text-xl font-bold" : "text-lg font-semibold"} mb-1`}
+                  className={`${
+                    section.headerType === "h1"
+                      ? "text-2xl font-bold"
+                      : section.headerType === "h2"
+                        ? "text-xl font-bold"
+                        : "text-lg font-semibold"
+                  } mb-1`}
                 >
                   {section.header}
                 </h3>
