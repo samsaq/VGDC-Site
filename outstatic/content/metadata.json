@@ -1,6 +1,6 @@
 {
-  "commit": "8aacd1bccde09af15e2d3a39bc9b5e6b336f98b0",
-  "generated": "2025-04-08T08:08:25.329Z",
+  "commit": "126e1c118318e447b4a914f6f9f1a63e539acb12",
+  "generated": "2025-04-08T18:23:55.970Z",
   "metadata": [
     {
       "__outstatic": {
@@ -94,24 +94,6 @@
     },
     {
       "__outstatic": {
-        "commit": "57f7b3380dd44a90fec6b41302076297ddb9f71b",
-        "hash": "1451531767",
-        "path": "outstatic/content/teams/marketing.md"
-      },
-      "author": {
-        "name": "samsaq",
-        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
-      },
-      "collection": "teams",
-      "coverImage": "/images/hoji-frog-EwNz.jpg",
-      "description": "",
-      "publishedAt": "2025-03-07T17:49:38.549Z",
-      "slug": "marketing",
-      "status": "published",
-      "title": "Marketing"
-    },
-    {
-      "__outstatic": {
         "commit": "8aacd1bccde09af15e2d3a39bc9b5e6b336f98b0",
         "hash": "210417208",
         "path": "outstatic/content/about/who-we-are.md"
@@ -127,6 +109,24 @@
       "slug": "who-we-are",
       "status": "published",
       "title": "Who We Are"
+    },
+    {
+      "__outstatic": {
+        "commit": "126e1c118318e447b4a914f6f9f1a63e539acb12",
+        "hash": "3183573759",
+        "path": "outstatic/content/teams/marketing.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "teams",
+      "coverImage": "/images/hoji-frog-EwNz.jpg",
+      "description": "",
+      "publishedAt": "2025-03-07T17:49:38.549Z",
+      "slug": "marketing",
+      "status": "published",
+      "title": "Marketing"
     }
   ]
 }
