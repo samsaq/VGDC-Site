@@ -1,6 +1,6 @@
 {
-  "commit": "57f7b3380dd44a90fec6b41302076297ddb9f71b",
-  "generated": "2025-04-04T22:50:08.343Z",
+  "commit": "8aacd1bccde09af15e2d3a39bc9b5e6b336f98b0",
+  "generated": "2025-04-08T08:08:25.329Z",
   "metadata": [
     {
       "__outstatic": {
@@ -94,24 +94,6 @@
     },
     {
       "__outstatic": {
-        "commit": "d405e6fe852b3942ada4af4c51c7b5b47a15244e",
-        "hash": "1284413580",
-        "path": "outstatic/content/about/who-we-are.md"
-      },
-      "author": {
-        "name": "Alvin Ton",
-        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
-      },
-      "collection": "about",
-      "coverImage": "/images/filler-image-cwNT.jpg",
-      "description": "About page for VGDC",
-      "publishedAt": "2025-04-04T15:51:36.544Z",
-      "slug": "who-we-are",
-      "status": "draft",
-      "title": "Who We Are"
-    },
-    {
-      "__outstatic": {
         "commit": "57f7b3380dd44a90fec6b41302076297ddb9f71b",
         "hash": "1451531767",
         "path": "outstatic/content/teams/marketing.md"
@@ -127,6 +109,24 @@
       "slug": "marketing",
       "status": "published",
       "title": "Marketing"
+    },
+    {
+      "__outstatic": {
+        "commit": "8aacd1bccde09af15e2d3a39bc9b5e6b336f98b0",
+        "hash": "210417208",
+        "path": "outstatic/content/about/who-we-are.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "about",
+      "coverImage": "/images/filler-image-cwNT.jpg",
+      "description": "About page for VGDC",
+      "publishedAt": "2025-04-04T15:51:36.544Z",
+      "slug": "who-we-are",
+      "status": "published",
+      "title": "Who We Are"
     }
   ]
 }
