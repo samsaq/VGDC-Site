@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { SideNav } from "@/components/sideNav";
 import { getTeamsData } from "@/lib/actions";
+import ReactMarkdown from "react-markdown";
 
 interface Team {
   title: string;
@@ -37,51 +38,6 @@ export default function Teams() {
   // Find the currently selected team
   const currentTeam = teams.find((team) => team.title === selectedTeam);
 
-  //processing for the content of each team - since its markdown
-  //we want to pull out of the sub-headers and their content and store them as a
-  //list of tuples - [sub-header, headerType, content]
-  //headerType is either "h2" or "h3" based on if they have ## or ###
-  const processContent = (content: string) => {
-    const lines = content.split("\n");
-    const processedContent = [];
-    let currentSection = null;
-
-    for (const element of lines) {
-      const line = element;
-
-      if (line.startsWith("###")) {
-        // Create a new h3 section
-        currentSection = {
-          header: line.slice(3).trim(),
-          headerType: "h3",
-          content: "",
-        };
-        processedContent.push(currentSection);
-      } else if (line.startsWith("##")) {
-        // Create a new h2 section
-        currentSection = {
-          header: line.slice(2).trim(),
-          headerType: "h2",
-          content: "",
-        };
-        processedContent.push(currentSection);
-      } else if (line.startsWith("#") && !line.startsWith("##")) {
-        // Create a new h1 section
-        currentSection = {
-          header: line.slice(1).trim(),
-          headerType: "h1",
-          content: "",
-        };
-        processedContent.push(currentSection);
-      } else if (currentSection && line.trim() !== "") {
-        // Add non-empty lines to the current section's content up till the next header
-        currentSection.content += (currentSection.content ? "\n" : "") + line;
-      }
-    }
-
-    return processedContent;
-  };
-
   //for rendering the per-team content of the page
   const renderContent = () => {
     if (loading) {
@@ -92,62 +48,145 @@ export default function Teams() {
       return <p>No team selected</p>;
     }
 
-    const processedSections = processContent(currentTeam.content);
+    // Custom header components for ReactMarkdown with tailwind styling
+    const components = {
+      h1: ({ ...props }) => (
+        <h1 className="mb-2 text-2xl font-bold" {...props} />
+      ),
+      h2: ({ ...props }) => (
+        <h2 className="mb-1 text-xl font-bold" {...props} />
+      ),
+      h3: ({ ...props }) => (
+        <h3 className="mb-1 text-lg font-semibold" {...props} />
+      ),
+    };
 
     return (
       <div className="flex h-full w-full flex-col items-center overflow-y-auto">
-        <div className="mb-4 flex w-full flex-row items-start justify-evenly gap-6 px-8">
-          <div className="flex flex-col items-start">
-            <h2 className="mb-2 w-full text-center text-2xl font-bold text-warning-alternative">
-              {currentTeam.title}
-            </h2>
-            {processedSections.length > 0 && (
-              <div>
-                <h3
-                  className={`${
-                    processedSections[0].headerType === "h1"
-                      ? "text-2xl font-bold"
-                      : processedSections[0].headerType === "h2"
-                        ? "text-xl font-bold"
-                        : "text-lg font-semibold"
-                  } mb-1`}
-                >
-                  {processedSections[0].header}
-                </h3>
-                <p className="text-sm">{processedSections[0].content}</p>
-              </div>
-            )}
-          </div>
-          {currentTeam.coverImage && (
-            <img
-              src={currentTeam.coverImage}
-              alt={currentTeam.title}
-              className="aspect-square w-64 rounded-2xl"
-            />
+        <div className="w-full px-8">
+          <h2 className="mb-4 w-full text-center text-2xl font-bold text-warning-alternative">
+            {currentTeam.title}
+          </h2>
+
+          {currentTeam.coverImage ? (
+            <>
+              {/* Check if content has any headers */}
+              {/^#{1,3}\s.+$/m.test(currentTeam.content) ? (
+                <>
+                  <div className="mb-8 flex flex-row items-start gap-6">
+                    <div className="prose prose-sm flex-1">
+                      {/* Display text up to the first heading */}
+                      {currentTeam.content.match(/^[^#].*$/m) && (
+                        <ReactMarkdown components={components}>
+                          {currentTeam.content.split(/^#{1,3}\s.+$/m)[0]}
+                        </ReactMarkdown>
+                      )}
+
+                      {/* Display first heading and its content */}
+                      {(() => {
+                        const regex = /^#{1,3}\s.+$/m;
+                        const match = regex.exec(currentTeam.content);
+                        if (match) {
+                          const firstHeading = match[0];
+                          const parts = currentTeam.content.split(regex);
+                          return (
+                            <ReactMarkdown components={components}>
+                              {firstHeading + "\n" + (parts[1] || "")}
+                            </ReactMarkdown>
+                          );
+                        }
+                        return null;
+                      })()}
+                    </div>
+                    <img
+                      src={currentTeam.coverImage}
+                      alt={currentTeam.title}
+                      className="aspect-square w-64 shrink-0 rounded-2xl"
+                    />
+                  </div>
+
+                  {/* Display remaining headings and content */}
+                  {(() => {
+                    const regex = /^#{1,3}\s.+$/gm;
+                    const matches = currentTeam.content.match(regex);
+                    if (matches && matches.length > 1) {
+                      // Get all content after the first header and its content
+                      const firstHeaderRegex = /^#{1,3}\s.+$/m;
+                      const firstMatch = firstHeaderRegex.exec(
+                        currentTeam.content,
+                      );
+
+                      if (firstMatch) {
+                        const firstHeaderPos = firstMatch.index;
+                        const firstHeaderEndPos =
+                          firstHeaderPos + firstMatch[0].length;
+
+                        // Find the position of the second header
+                        const afterFirstHeader =
+                          currentTeam.content.substring(firstHeaderEndPos);
+                        const secondHeaderMatch = /^#{1,3}\s.+$/m.exec(
+                          afterFirstHeader,
+                        );
+
+                        if (secondHeaderMatch) {
+                          const secondHeaderPos =
+                            firstHeaderEndPos + secondHeaderMatch.index;
+                          // Get everything after the first header's content
+                          const remainingContent =
+                            currentTeam.content.substring(secondHeaderPos);
+
+                          return (
+                            <div className="prose prose-sm w-full">
+                              <ReactMarkdown components={components}>
+                                {remainingContent}
+                              </ReactMarkdown>
+                            </div>
+                          );
+                        }
+                      }
+                    }
+                    return null;
+                  })()}
+                </>
+              ) : (
+                /* No headers - show content split by word count - defaults to 50 */
+                <>
+                  <div className="mb-8 flex flex-row items-start gap-6">
+                    <div className="prose prose-sm flex-1">
+                      <ReactMarkdown components={components}>
+                        {currentTeam.content.split(/\s+/).length > 50
+                          ? currentTeam.content
+                              .split(/\s+/)
+                              .slice(0, 50)
+                              .join(" ") + "..."
+                          : currentTeam.content}
+                      </ReactMarkdown>
+                    </div>
+                    <img
+                      src={currentTeam.coverImage}
+                      alt={currentTeam.title}
+                      className="aspect-square w-64 shrink-0 rounded-2xl"
+                    />
+                  </div>
+                  {currentTeam.content.split(/\s+/).length > 50 && (
+                    <div className="prose prose-sm w-full">
+                      <ReactMarkdown components={components}>
+                        {currentTeam.content.split(/\s+/).slice(50).join(" ")}
+                      </ReactMarkdown>
+                    </div>
+                  )}
+                </>
+              )}
+            </>
+          ) : (
+            /* No image - render content at full width */
+            <div className="prose prose-sm w-full">
+              <ReactMarkdown components={components}>
+                {currentTeam.content}
+              </ReactMarkdown>
+            </div>
           )}
         </div>
-
-        {/* Additional sections below the image */}
-        {processedSections.length > 1 && (
-          <div className="mt-4 w-full px-8">
-            {processedSections.slice(1).map((section, index) => (
-              <div key={index} className="mb-6">
-                <h3
-                  className={`${
-                    section.headerType === "h1"
-                      ? "text-2xl font-bold"
-                      : section.headerType === "h2"
-                        ? "text-xl font-bold"
-                        : "text-lg font-semibold"
-                  } mb-1`}
-                >
-                  {section.header}
-                </h3>
-                <p className="text-sm">{section.content}</p>
-              </div>
-            ))}
-          </div>
-        )}
       </div>
     );
   };
