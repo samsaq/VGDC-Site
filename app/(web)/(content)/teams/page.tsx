@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { SideNav } from "@/components/sideNav";
 import { getTeamsData } from "@/lib/actions";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface Team {
   title: string;
@@ -48,7 +49,7 @@ export default function Teams() {
       return <p>No team selected</p>;
     }
 
-    // Custom header components for ReactMarkdown with tailwind styling
+    // Custom components for ReactMarkdown with tailwind styling
     const components = {
       h1: ({ ...props }) => (
         <h1 className="mb-2 text-2xl font-bold" {...props} />
@@ -58,6 +59,49 @@ export default function Teams() {
       ),
       h3: ({ ...props }) => (
         <h3 className="mb-1 text-lg font-semibold" {...props} />
+      ),
+      // Improve list rendering
+      ul: ({ ...props }) => (
+        <ul className="mb-4 list-disc space-y-1 pl-5" {...props} />
+      ),
+      ol: ({ ...props }) => (
+        <ol className="mb-4 list-decimal space-y-1 pl-5" {...props} />
+      ),
+      // Improve blockquote styling
+      blockquote: ({ ...props }) => (
+        <blockquote
+          className="my-4 border-l-4 border-gray-300 pl-4 italic"
+          {...props}
+        />
+      ),
+      // Better code block styling
+      code: ({ ...props }) => (
+        <code
+          className="rounded bg-gray-100 px-1 py-0.5 font-mono text-sm"
+          {...props}
+        />
+      ),
+      pre: ({ ...props }) => (
+        <pre
+          className="my-4 overflow-x-auto rounded bg-gray-100 p-3 font-mono text-sm"
+          {...props}
+        />
+      ),
+      // Improve table styling
+      table: ({ ...props }) => (
+        <div className="my-4 overflow-x-auto">
+          <table
+            className="min-w-full divide-y divide-gray-300 text-sm"
+            {...props}
+          />
+        </div>
+      ),
+      thead: ({ ...props }) => <thead className="bg-gray-100" {...props} />,
+      th: ({ ...props }) => (
+        <th className="px-3 py-2 text-left font-semibold" {...props} />
+      ),
+      td: ({ ...props }) => (
+        <td className="border-t border-gray-200 px-3 py-2" {...props} />
       ),
     };
 
@@ -77,7 +121,10 @@ export default function Teams() {
                     <div className="prose prose-sm flex-1">
                       {/* Display text up to the first heading */}
                       {currentTeam.content.match(/^[^#].*$/m) && (
-                        <ReactMarkdown components={components}>
+                        <ReactMarkdown
+                          remarkPlugins={[remarkGfm]}
+                          components={components}
+                        >
                           {currentTeam.content.split(/^#{1,3}\s.+$/m)[0]}
                         </ReactMarkdown>
                       )}
@@ -90,7 +137,10 @@ export default function Teams() {
                           const firstHeading = match[0];
                           const parts = currentTeam.content.split(regex);
                           return (
-                            <ReactMarkdown components={components}>
+                            <ReactMarkdown
+                              remarkPlugins={[remarkGfm]}
+                              components={components}
+                            >
                               {firstHeading + "\n" + (parts[1] || "")}
                             </ReactMarkdown>
                           );
@@ -137,7 +187,10 @@ export default function Teams() {
 
                           return (
                             <div className="prose prose-sm w-full">
-                              <ReactMarkdown components={components}>
+                              <ReactMarkdown
+                                remarkPlugins={[remarkGfm]}
+                                components={components}
+                              >
                                 {remainingContent}
                               </ReactMarkdown>
                             </div>
@@ -153,7 +206,10 @@ export default function Teams() {
                 <>
                   <div className="mb-8 flex flex-row items-start gap-6">
                     <div className="prose prose-sm flex-1">
-                      <ReactMarkdown components={components}>
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        components={components}
+                      >
                         {currentTeam.content.split(/\s+/).length > 50
                           ? currentTeam.content
                               .split(/\s+/)
@@ -170,7 +226,10 @@ export default function Teams() {
                   </div>
                   {currentTeam.content.split(/\s+/).length > 50 && (
                     <div className="prose prose-sm w-full">
-                      <ReactMarkdown components={components}>
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        components={components}
+                      >
                         {currentTeam.content.split(/\s+/).slice(50).join(" ")}
                       </ReactMarkdown>
                     </div>
@@ -180,8 +239,11 @@ export default function Teams() {
             </>
           ) : (
             /* No image - render content at full width */
-            <div className="prose prose-sm w-full">
-              <ReactMarkdown components={components}>
+            <div className="prose prose-sm prose-ul:pl-0 prose-ol:pl-0 prose-li:pl-0 prose-table:my-0 w-full max-w-none">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={components}
+              >
                 {currentTeam.content}
               </ReactMarkdown>
             </div>
