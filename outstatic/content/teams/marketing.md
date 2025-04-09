@@ -23,3 +23,20 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
 # Testing H1
 
 example text
+
+- Bullet 1
+- Bullet2
+
+1. Number 1
+2. Number 2
+
+> Praise be to the frog quote
+
+```
+I'm Coding Here Brother
+```
+
+| 1 | 2 | 3 |
+| --- | --- | --- |
+| 4 | 5 | 6 |
+| 7 | 8 | 9 |
