@@ -1,23 +1,50 @@
 "use client";
 import { useState, useEffect } from "react";
-
+import { getAboutData } from "@/lib/actions";
 interface About {
     title: string;
     content: string;
     coverImage?: string;
+    [key: string]: unknown;
   }
 export default function About()
 {
-    const [about, setAbout] = useState("");
+    const [about, setAbout] = useState<About[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [selectedAbout, setSelectedAbout] = useState("");
+    useEffect(() => {
+        async function fetchAbout() 
+        {
+          try 
+          {
+            const info = await getAboutData();
+            setAbout(info);
+            if (info.length > 0) 
+            {
+                setSelectedAbout(info[0].title);
+            }            
+          } 
+          catch (error) 
+          {
+            console.error("Error fetching about:", error);
+          } 
+          finally 
+          {
+            setLoading(false);
+          }
+        }
+        fetchAbout();
+    }, []);
+    const currentAbout = about.find((data) => data.title === selectedAbout);
     return(
-        <div className="margin=0 padding=0"> {/* Page container*/}
+        <section className="margin-0"> {/* Page container*/}
             <div>{/*Non-header container*/}
                 <div className="flex items-center justify-center pt-20 pb-10">{/* Title Container*/}
                     <h1 className="font-outfit font-bold text-4xl text-red-600"> 
-                        Who We Are
+                       
                     </h1>
                 </div>
-                <div className="font-outfit font-bold pb-5">{/* Subheader 1 container*/}
+                <div className="font-outfit font-bold pb-5 px-5">{/* Subheader 1 container*/}
                     <h1 className="text-gray-500 text-2xl py-5">
                         Sub Header 1
                     </h1>
@@ -28,7 +55,10 @@ export default function About()
                 <div className="flex flex-col md:flex-row h-auto"> 
                     {/* Subheader 2 Split container */}
                     <div className="w-full md:w-1/2">
-                        
+                        <img 
+                            src={currentAbout?.coverImage}
+                            className="w-full h-auto object-cover"
+                         />
                     </div>
                     <div className="w-full md:w-1/2 font-outfit font-bold p-5">
                         <h1 className="text-gray-500 text-2xl pb-2"> {/* Reduced padding */}
@@ -64,6 +94,6 @@ export default function About()
                     </div>
 
             </div>
-        </div>
+        </section>
     )
 }
