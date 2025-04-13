@@ -1,25 +1,7 @@
 {
-  "commit": "cea76f39f8158121780b55a3be1a48fabbe36b4b",
-  "generated": "2025-03-07T22:27:29.645Z",
+  "commit": "226fdaf1365f272662d5f6ccf28aacf9dfb4f42b",
+  "generated": "2025-04-09T03:35:41.234Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "bedcd1700a7741aa43991fb27d39bb37691abe48",
-        "hash": "2429970994",
-        "path": "outstatic/content/teams/marketing.md"
-      },
-      "author": {
-        "name": "samsaq",
-        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
-      },
-      "collection": "teams",
-      "coverImage": "/images/hoji-frog-EwNz.jpg",
-      "description": "",
-      "publishedAt": "2025-03-07T17:49:38.549Z",
-      "slug": "marketing",
-      "status": "published",
-      "title": "Marketing"
-    },
     {
       "__outstatic": {
         "commit": "6b19a6a7032fcb4db99357c1280692482bf3ddda",
@@ -109,6 +91,42 @@
       "slug": "sound",
       "status": "published",
       "title": "Sound"
+    },
+    {
+      "__outstatic": {
+        "commit": "8aacd1bccde09af15e2d3a39bc9b5e6b336f98b0",
+        "hash": "210417208",
+        "path": "outstatic/content/about/who-we-are.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "about",
+      "coverImage": "/images/filler-image-cwNT.jpg",
+      "description": "About page for VGDC",
+      "publishedAt": "2025-04-04T15:51:36.544Z",
+      "slug": "who-we-are",
+      "status": "published",
+      "title": "Who We Are"
+    },
+    {
+      "__outstatic": {
+        "commit": "226fdaf1365f272662d5f6ccf28aacf9dfb4f42b",
+        "hash": "2984060544",
+        "path": "outstatic/content/teams/marketing.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "teams",
+      "coverImage": "/images/hoji-frog-EwNz.jpg",
+      "description": "",
+      "publishedAt": "2025-03-07T17:49:38.549Z",
+      "slug": "marketing",
+      "status": "published",
+      "title": "Marketing"
     }
   ]
 }

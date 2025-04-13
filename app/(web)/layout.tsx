@@ -50,7 +50,7 @@ export default function RootLayout({
             forcedTheme: "light",
           }}
         >
-          <div className="relative flex h-screen flex-col">
+          <div className="relative flex h-screen flex-row">
             <main className="container min-w-full flex-grow">{children}</main>
           </div>
         </Providers>
