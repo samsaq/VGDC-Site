@@ -1,0 +1,13 @@
+{
+  "title": "about",
+  "type": "object",
+  "properties": {
+    "title": {
+      "required": true,
+      "description": "",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "title"
+    }
+  }
+}
