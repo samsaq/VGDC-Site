@@ -1,6 +1,6 @@
 {
-  "commit": "8c5fe1d677e71c224337c5b563f789582bb397b8",
-  "generated": "2025-04-11T22:53:14.224Z",
+  "commit": "9d7164460010ffb5ee2ecef58ca3ec2d2316c41f",
+  "generated": "2025-04-17T04:37:31.037Z",
   "metadata": [
     {
       "__outstatic": {
@@ -112,8 +112,8 @@
     },
     {
       "__outstatic": {
-        "commit": "8c5fe1d677e71c224337c5b563f789582bb397b8",
-        "hash": "222914552",
+        "commit": "9d7164460010ffb5ee2ecef58ca3ec2d2316c41f",
+        "hash": "718783287",
         "path": "outstatic/content/about/who-we-are.md"
       },
       "author": {
@@ -126,7 +126,7 @@
       "publishedAt": "2025-04-11T15:51:36.000Z",
       "slug": "who-we-are",
       "status": "published",
-      "title": "Who We Are"
+      "title": "Who We"
     }
   ]
 }

@@ -1,5 +1,5 @@
 ---
-title: 'Who We Are'
+title: 'Who We'
 status: 'published'
 author:
   name: 'Alvin Ton'
@@ -12,7 +12,7 @@ publishedAt: '2025-04-11T15:51:36.000Z'
 
 ## Heading 1
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
 
 ## Heading 2
 
