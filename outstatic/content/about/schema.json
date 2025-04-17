@@ -8,13 +8,6 @@
       "fieldType": "String",
       "dataType": "string",
       "title": "title"
-    },
-    "subHeaderA": {
-      "required": true,
-      "description": "",
-      "fieldType": "String",
-      "dataType": "string",
-      "title": "SubHeaderA"
     }
   }
 }
