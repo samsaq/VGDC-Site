@@ -1,6 +1,6 @@
 {
   "commit": "19a93b4a5dd989c951f2ca6ae071cf5a6ee5e6ef",
-  "generated": "2025-04-17T07:39:22.765Z",
+  "generated": "2025-04-17T07:42:39.540Z",
   "metadata": [
     {
       "__outstatic": {
@@ -113,7 +113,7 @@
     {
       "__outstatic": {
         "commit": "19a93b4a5dd989c951f2ca6ae071cf5a6ee5e6ef",
-        "hash": "323104295",
+        "hash": "1183094337",
         "path": "outstatic/content/about/who-we-are.md"
       },
       "author": {
@@ -129,9 +129,13 @@
       "status": "published",
       "subHeaderA": "Heading A",
       "subbheaderB": [
+        {
+          "label": "subheaderA",
+          "value": "subheaderA"
+        }
       ],
       "subheaderA": "this is a test",
-      "title": "car"
+      "title": "cat"
     }
   ]
 }

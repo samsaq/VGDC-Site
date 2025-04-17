@@ -29,7 +29,12 @@
       "fieldType": "Tags",
       "dataType": "array",
       "title": "SubbheaderB",
-      "values": []
+      "values": [
+        {
+          "value": "subheaderA",
+          "label": "subheaderA"
+        }
+      ]
     }
   }
 }
