@@ -9,13 +9,6 @@
       "dataType": "string",
       "title": "title"
     },
-    "contentA": {
-      "required": false,
-      "description": "",
-      "fieldType": "Text",
-      "dataType": "string",
-      "title": "ContentA"
-    },
     "subbheaderB": {
       "required": false,
       "description": "",
