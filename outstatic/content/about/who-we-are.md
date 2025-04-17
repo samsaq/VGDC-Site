@@ -8,6 +8,7 @@ slug: 'who-we-are'
 description: 'About page for VGDC'
 coverImage: '/images/filler-image-cwNT.jpg'
 subHeaderA: 'Heading A'
+subheaderA: 'this is a test'
 publishedAt: '2025-04-11T15:51:36.000Z'
 ---
 

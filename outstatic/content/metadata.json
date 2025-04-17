@@ -1,6 +1,6 @@
 {
-  "commit": "1bc306f0c790842b649f859100491281b6f40eeb",
-  "generated": "2025-04-17T07:37:26.979Z",
+  "commit": "32aaf20a44121dacc047dbd4ee4ad85326c313c0",
+  "generated": "2025-04-17T07:38:15.079Z",
   "metadata": [
     {
       "__outstatic": {
@@ -112,8 +112,8 @@
     },
     {
       "__outstatic": {
-        "commit": "1bc306f0c790842b649f859100491281b6f40eeb",
-        "hash": "160663283",
+        "commit": "32aaf20a44121dacc047dbd4ee4ad85326c313c0",
+        "hash": "3669490547",
         "path": "outstatic/content/about/who-we-are.md"
       },
       "author": {
@@ -127,6 +127,7 @@
       "slug": "who-we-are",
       "status": "published",
       "subHeaderA": "Heading A",
+      "subheaderA": "this is a test",
       "title": "car"
     }
   ]
