@@ -140,7 +140,7 @@ export default function Home() {
               </span>
             </button>
           </a>
-          <a href="/">
+          {/* <a href="/">
             <button className="flex flex-row items-center justify-center rounded-full font-poppins text-2xl font-bold text-secondary-foreground">
               <span className="tiktok-hover relative -mx-2 -mr-3 text-4xl">
                 <svg
@@ -181,7 +181,7 @@ export default function Home() {
                 </svg>
               </span>
             </button>
-          </a>
+          </a> */}
           <a href="https://x.com/HeatwaveAZ">
             <button className="flex flex-row items-center justify-center rounded-full font-poppins text-2xl font-bold text-secondary-foreground">
               <span className="transition-colors duration-300 hover:text-black">

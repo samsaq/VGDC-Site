@@ -1,25 +1,7 @@
 {
-  "commit": "cea76f39f8158121780b55a3be1a48fabbe36b4b",
-  "generated": "2025-03-07T22:27:29.645Z",
+  "commit": "b6657a74c57ad9b9c28cef5c80586f5b44010afc",
+  "generated": "2025-04-17T07:02:50.439Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "bedcd1700a7741aa43991fb27d39bb37691abe48",
-        "hash": "2429970994",
-        "path": "outstatic/content/teams/marketing.md"
-      },
-      "author": {
-        "name": "samsaq",
-        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
-      },
-      "collection": "teams",
-      "coverImage": "/images/hoji-frog-EwNz.jpg",
-      "description": "",
-      "publishedAt": "2025-03-07T17:49:38.549Z",
-      "slug": "marketing",
-      "status": "published",
-      "title": "Marketing"
-    },
     {
       "__outstatic": {
         "commit": "6b19a6a7032fcb4db99357c1280692482bf3ddda",
@@ -109,6 +91,42 @@
       "slug": "sound",
       "status": "published",
       "title": "Sound"
+    },
+    {
+      "__outstatic": {
+        "commit": "fd4f486832ab99b1f9593da922b701c8d491d2b2",
+        "hash": "1832217228",
+        "path": "outstatic/content/teams/marketing.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "teams",
+      "coverImage": "/images/hoji-frog-EwNz.jpg",
+      "description": "",
+      "publishedAt": "2025-03-07T17:49:38.549Z",
+      "slug": "marketing",
+      "status": "published",
+      "title": "Marketing"
+    },
+    {
+      "__outstatic": {
+        "commit": "b6657a74c57ad9b9c28cef5c80586f5b44010afc",
+        "hash": "3338773438",
+        "path": "outstatic/content/about/who-we-are.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "about",
+      "coverImage": "/images/filler-image-cwNT.jpg",
+      "description": "About page for VGDC",
+      "publishedAt": "2025-04-11T15:51:36.000Z",
+      "slug": "who-we-are",
+      "status": "published",
+      "title": "care"
     }
   ]
 }
