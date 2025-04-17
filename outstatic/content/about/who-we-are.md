@@ -12,7 +12,7 @@ publishedAt: '2025-04-11T15:51:36.000Z'
 
 ## Heading 1
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
+Hello there
 
 ## Heading 2
 
