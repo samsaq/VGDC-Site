@@ -26,23 +26,23 @@ export default function About()
 
                 <div className="flex items-center justify-center pt-20 pb-10">{/* Title Container*/}
                     <h1 className="font-outfit font-bold text-4xl text-red-600"> 
-                        {aboutPage.title}
+                        {aboutPage?.title}
                     </h1>
                 </div>
                 <div className="font-outfit font-bold pb-5">{/* Subheader 1 container*/}
                     <h1 className="text-gray-500 text-2xl py-5">
-                        Sub Header 1
+                        
                     </h1>
                     <p className="text-gray-500 text-xl">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
+                    {aboutPage?.content}
                     </p>
                 </div> 
                 <div className="flex flex-col md:flex-row h-auto"> 
                     {/* Subheader 2 Split container */}
                     <div className="w-full md:w-1/2">
-                    {aboutPage.length > 0 && (
-                        <img src={aboutPage[0].coverImage} alt="Cover" />
-                        )}
+                    {aboutPage?.coverImage && (
+                        <img src={aboutPage.coverImage} alt="Cover" />
+                    )}
                       </div>
                     <div className="w-full md:w-1/2 font-outfit font-bold p-5">
                         <h1 className="text-gray-500 text-2xl pb-2"> {/* Reduced padding */}
