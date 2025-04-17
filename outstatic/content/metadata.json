@@ -1,6 +1,6 @@
 {
-  "commit": "6ffe4750a60b83f8880ed7edde5c40a448c063b1",
-  "generated": "2025-04-17T07:57:17.858Z",
+  "commit": "07763959e33cb473886d2475f11ca99cb4aee16a",
+  "generated": "2025-04-17T07:58:24.917Z",
   "metadata": [
     {
       "__outstatic": {
@@ -112,8 +112,8 @@
     },
     {
       "__outstatic": {
-        "commit": "6ffe4750a60b83f8880ed7edde5c40a448c063b1",
-        "hash": "485405426",
+        "commit": "07763959e33cb473886d2475f11ca99cb4aee16a",
+        "hash": "3902967256",
         "path": "outstatic/content/about/who-we-are.md"
       },
       "author": {
@@ -124,6 +124,7 @@
       "contentA": "",
       "coverImage": "/images/filler-image-cwNT.jpg",
       "description": "About page for VGDC",
+      "headingA": "Heading 1",
       "publishedAt": "2025-04-11T15:51:36.000Z",
       "slug": "who-we-are",
       "status": "published",
