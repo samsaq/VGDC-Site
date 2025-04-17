@@ -7,6 +7,6 @@ export async function getTeamsData() {
   return teams;
 }
 export async function getAboutData(){
-  const about = getDocuments("about", ["title", "headingA", "content", "coverImage"]);
+  const about = getDocuments("about", ["title", "content", "coverImage"]);
   return about[0];
 }

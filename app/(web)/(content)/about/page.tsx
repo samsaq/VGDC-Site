@@ -1,6 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import { getAboutData } from "@/lib/actions";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
 interface About {
     title: string;
     headingA: string;
@@ -11,8 +14,9 @@ interface About {
 export default function About()
 {
     const [aboutPage, setAboutPage] = useState<About>();
-    const [selectedAboutPage, setSelectedAboutPage] = useState("");
+    const [selectedAboutPage, setSelectedAboutPage] = useState([]);
     const [loading, setLoading] = useState(true);
+    const regex = /^#{1,3}\s.+$/m;
     useEffect(() => {
         async function fetchAbout() {
           const data = await getAboutData();
@@ -21,36 +25,41 @@ export default function About()
         }
         fetchAbout();
       }, []);
+      const sections = aboutPage?.content?.split("<!-- section -->").filter(Boolean);
+      
     return(
-        <section className="margin=0 p-5"> {/* Page container*/}
-            <div>{/*Non-header container*/}
+        <section className="m-0 overflow-y-auto max-h-full p-5"> {/* Page container*/}
 
-                <div className="flex items-center justify-center pt-20 pb-10">{/* Title Container*/}
+            <div>{/*Non-header container*/}
+                <div className="flex items-center justify-center pt-20 pb-5">{/* Title Container*/}
                     <h1 className="font-outfit font-bold text-4xl text-red-600"> 
                         {aboutPage?.title}
                     </h1>
                 </div>
                 <div className="font-outfit font-bold pb-5">{/* Subheader 1 container*/}
                     <h1 className="text-gray-500 text-2xl py-5">
-                        {aboutPage?.headingA}
+
+                        {aboutPage?.content.split("\n")
+                        .filter(section => section.includes("#"))[0].replaceAll('#', "")}
                     </h1>
                     <p className="text-gray-500 text-xl">
-                    {aboutPage?.content}
+                    {aboutPage?.content.split(/^#{1,3}\s.+$/m)[1]}
                     </p>
                 </div> 
                 <div className="flex flex-col md:flex-row h-auto"> 
                     {/* Subheader 2 Split container */}
-                    <div className="w-full md:w-1/2">
+                    <div className="w-1/8 md:w-1/2">
                     {aboutPage?.coverImage && (
                         <img src={aboutPage.coverImage} alt="Cover" />
                     )}
                       </div>
                     <div className="w-full md:w-1/2 font-outfit font-bold p-5">
                         <h1 className="text-gray-500 text-2xl pb-2"> {/* Reduced padding */}
-                        Sub Header 2
+                        {aboutPage?.content.split("\n")
+                        .filter(section => section.includes("#"))[1].replaceAll('#', "")}
                         </h1>
                         <p className="text-gray-500 text-xl">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
+                         {aboutPage?.content.split(/^#{1,3}\s.+$/m)[2]}
                         </p>
                     </div>
                     </div>
@@ -60,20 +69,22 @@ export default function About()
                     {/* Subheader 3 container */}
                     <div className="font-outfit font-bold relative">
                         <h1 className="text-gray-500 text-2xl pb-2">
-                        Sub Header 3
+                        {aboutPage?.content.split("\n")
+                        .filter(section => section.includes("#"))[2].replaceAll('#', "")}
                         </h1>
                         <p className="text-gray-500 text-xl">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
+                        {aboutPage?.content.split(/^#{1,3}\s.+$/m)[3]}
                         </p>
                     </div>
 
                     {/* Subheader 4 container */}
                     <div className="font-outfit font-bold">
-                        <h1 className="text-gray-500 text-2xl pb-2">
-                        Sub Header 4
+                        <h1 className="text-gray-500 text-2xl py-4">
+                        {aboutPage?.content.split("\n")
+                        .filter(section => section.includes("#"))[3].replaceAll('#', "")}
                         </h1>
-                        <p className="text-gray-500 text-xl pb-5">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
+                        <p className="text-gray-500 text-xl">
+                        {aboutPage?.content.split(/^#{1,3}\s.+$/m)[4]}
                         </p>
                     </div>
                     </div>
