@@ -1,35 +1,7 @@
 {
-  "commit": "19671a28ec8281e0f69b7fbaa029b0f7e684c747",
-  "generated": "Thu, 17 Apr 2025 09:39:50 GMT",
+  "commit": "ec4a4c8166ee565069fe90af6585dedfc50dbd0c",
+  "generated": "2025-04-17T09:40:03.424Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "ce6d87b733f5713fd3c4863a3778f5d7ce603f7d",
-        "hash": "3766084301",
-        "path": "outstatic/content/about/who-we-are.md"
-      },
-      "author": {
-        "name": "Alvin Ton",
-        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
-      },
-      "collection": "about",
-      "contentA": "",
-      "coverImage": "/images/filler-image-cwNT.jpg",
-      "description": "About page for VGDC",
-      "headingA": "Heading 1",
-      "publishedAt": "2025-04-11T15:51:36.000Z",
-      "slug": "who-we-are",
-      "status": "published",
-      "subHeaderA": "Heading A",
-      "subbheaderB": [
-        {
-          "label": "subheaderA",
-          "value": "subheaderA"
-        }
-      ],
-      "subheaderA": "this is a test",
-      "title": "cat"
-    },
     {
       "__outstatic": {
         "commit": "446a749fd04568191538d043f4d33cb6a61fccb9",
@@ -137,6 +109,34 @@
       "slug": "design",
       "status": "published",
       "title": "Design"
+    },
+    {
+      "__outstatic": {
+        "commit": "ec4a4c8166ee565069fe90af6585dedfc50dbd0c",
+        "hash": "3766084301",
+        "path": "outstatic/content/about/who-we-are.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "about",
+      "contentA": "",
+      "coverImage": "/images/filler-image-cwNT.jpg",
+      "description": "About page for VGDC",
+      "headingA": "Heading 1",
+      "publishedAt": "2025-04-11T15:51:36.000Z",
+      "slug": "who-we-are",
+      "status": "published",
+      "subHeaderA": "Heading A",
+      "subbheaderB": [
+        {
+          "label": "subheaderA",
+          "value": "subheaderA"
+        }
+      ],
+      "subheaderA": "this is a test",
+      "title": "cat"
     }
   ]
 }
