@@ -1,7 +1,25 @@
 {
   "commit": "747c1041d3e1234ed9ae7350b0e9d4ba6172e7e5",
-  "generated": "Thu, 17 Apr 2025 07:59:09 GMT",
+  "generated": "Thu, 17 Apr 2025 08:05:26 GMT",
   "metadata": [
+    {
+      "__outstatic": {
+        "commit": "446a749fd04568191538d043f4d33cb6a61fccb9",
+        "hash": "2688850827",
+        "path": "outstatic/content/teams/art.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "teams",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2025-03-07T21:06:45.087Z",
+      "slug": "art",
+      "status": "published",
+      "title": "Art"
+    },
     {
       "__outstatic": {
         "commit": "3074368f778fd3e9c31263f607b0deee19068437",
@@ -29,24 +47,6 @@
       ],
       "subheaderA": "this is a test",
       "title": "cat"
-    },
-    {
-      "__outstatic": {
-        "commit": "446a749fd04568191538d043f4d33cb6a61fccb9",
-        "hash": "2688850827",
-        "path": "outstatic/content/teams/art.md"
-      },
-      "author": {
-        "name": "samsaq",
-        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
-      },
-      "collection": "teams",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2025-03-07T21:06:45.087Z",
-      "slug": "art",
-      "status": "published",
-      "title": "Art"
     },
     {
       "__outstatic": {
