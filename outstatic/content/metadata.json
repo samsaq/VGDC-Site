@@ -1,6 +1,6 @@
 {
   "commit": "97bc25e28052a498bef49d929d562688ad8a1f9a",
-  "generated": "2025-04-17T06:52:55.391Z",
+  "generated": "2025-04-17T06:53:05.479Z",
   "metadata": [
     {
       "__outstatic": {
@@ -113,7 +113,7 @@
     {
       "__outstatic": {
         "commit": "97bc25e28052a498bef49d929d562688ad8a1f9a",
-        "hash": "2033498414",
+        "hash": "3338773438",
         "path": "outstatic/content/about/who-we-are.md"
       },
       "author": {
@@ -126,7 +126,7 @@
       "publishedAt": "2025-04-11T15:51:36.000Z",
       "slug": "who-we-are",
       "status": "published",
-      "title": "Who We"
+      "title": "care"
     }
   ]
 }
