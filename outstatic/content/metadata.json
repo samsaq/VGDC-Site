@@ -1,35 +1,7 @@
 {
-  "commit": "750fcb104d4e6a48faca057664034cebd0ad2694",
-  "generated": "Thu, 17 Apr 2025 09:02:46 GMT",
+  "commit": "19050f845eafadf00d637f8e0995b7faaa0341d8",
+  "generated": "2025-04-17T09:17:33.741Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "b6ba66c05cc08983e038519c1e9586c8507feebc",
-        "hash": "222812929",
-        "path": "outstatic/content/about/who-we-are.md"
-      },
-      "author": {
-        "name": "Alvin Ton",
-        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
-      },
-      "collection": "about",
-      "contentA": "",
-      "coverImage": "/images/filler-image-cwNT.jpg",
-      "description": "About page for VGDC",
-      "headingA": "Heading 1",
-      "publishedAt": "2025-04-11T15:51:36.000Z",
-      "slug": "who-we-are",
-      "status": "published",
-      "subHeaderA": "Heading A",
-      "subbheaderB": [
-        {
-          "label": "subheaderA",
-          "value": "subheaderA"
-        }
-      ],
-      "subheaderA": "this is a test",
-      "title": "cat"
-    },
     {
       "__outstatic": {
         "commit": "446a749fd04568191538d043f4d33cb6a61fccb9",
@@ -137,6 +109,34 @@
       "slug": "marketing",
       "status": "published",
       "title": "Marketing"
+    },
+    {
+      "__outstatic": {
+        "commit": "19050f845eafadf00d637f8e0995b7faaa0341d8",
+        "hash": "222812929",
+        "path": "outstatic/content/about/who-we-are.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "about",
+      "contentA": "",
+      "coverImage": "/images/filler-image-cwNT.jpg",
+      "description": "About page for VGDC",
+      "headingA": "Heading 1",
+      "publishedAt": "2025-04-11T15:51:36.000Z",
+      "slug": "who-we-are",
+      "status": "published",
+      "subHeaderA": "Heading A",
+      "subbheaderB": [
+        {
+          "label": "subheaderA",
+          "value": "subheaderA"
+        }
+      ],
+      "subheaderA": "this is a test",
+      "title": "cat"
     }
   ]
 }
