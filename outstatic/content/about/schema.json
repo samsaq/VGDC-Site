@@ -9,13 +9,6 @@
       "dataType": "string",
       "title": "title"
     },
-    "subheaderA": {
-      "required": true,
-      "description": "header1",
-      "fieldType": "String",
-      "dataType": "string",
-      "title": "SubheaderA"
-    },
     "contentA": {
       "required": false,
       "description": "",
