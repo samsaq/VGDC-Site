@@ -1,6 +1,6 @@
 {
   "commit": "891f281922fbf6071c04e50fc8a3e5537dab79e6",
-  "generated": "2025-04-17T07:35:39.267Z",
+  "generated": "2025-04-17T07:35:51.450Z",
   "metadata": [
     {
       "__outstatic": {
@@ -113,7 +113,7 @@
     {
       "__outstatic": {
         "commit": "891f281922fbf6071c04e50fc8a3e5537dab79e6",
-        "hash": "1889594703",
+        "hash": "160663283",
         "path": "outstatic/content/about/who-we-are.md"
       },
       "author": {
@@ -127,7 +127,7 @@
       "slug": "who-we-are",
       "status": "published",
       "subHeaderA": "Heading A",
-      "title": "care"
+      "title": "car"
     }
   ]
 }
