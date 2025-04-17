@@ -1,6 +1,6 @@
 {
-  "commit": "b6657a74c57ad9b9c28cef5c80586f5b44010afc",
-  "generated": "2025-04-17T07:02:50.439Z",
+  "commit": "bab9b0a829aee1efda0f083c94053eee109fe288",
+  "generated": "2025-04-17T07:24:27.054Z",
   "metadata": [
     {
       "__outstatic": {
@@ -112,8 +112,8 @@
     },
     {
       "__outstatic": {
-        "commit": "b6657a74c57ad9b9c28cef5c80586f5b44010afc",
-        "hash": "3338773438",
+        "commit": "bab9b0a829aee1efda0f083c94053eee109fe288",
+        "hash": "1889594703",
         "path": "outstatic/content/about/who-we-are.md"
       },
       "author": {
@@ -126,6 +126,7 @@
       "publishedAt": "2025-04-11T15:51:36.000Z",
       "slug": "who-we-are",
       "status": "published",
+      "subHeaderA": "Heading A",
       "title": "care"
     }
   ]
