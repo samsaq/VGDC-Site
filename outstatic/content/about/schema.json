@@ -15,6 +15,13 @@
       "fieldType": "String",
       "dataType": "string",
       "title": "SubheaderA"
+    },
+    "contentA": {
+      "required": false,
+      "description": "",
+      "fieldType": "Text",
+      "dataType": "string",
+      "title": "ContentA"
     }
   }
 }
