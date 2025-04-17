@@ -1,10 +1,38 @@
 {
-  "commit": "b6657a74c57ad9b9c28cef5c80586f5b44010afc",
-  "generated": "2025-04-17T07:02:50.439Z",
+  "commit": "747c1041d3e1234ed9ae7350b0e9d4ba6172e7e5",
+  "generated": "Thu, 17 Apr 2025 07:59:09 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "6b19a6a7032fcb4db99357c1280692482bf3ddda",
+        "commit": "3074368f778fd3e9c31263f607b0deee19068437",
+        "hash": "3902967256",
+        "path": "outstatic/content/about/who-we-are.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "about",
+      "contentA": "",
+      "coverImage": "/images/filler-image-cwNT.jpg",
+      "description": "About page for VGDC",
+      "headingA": "Heading 1",
+      "publishedAt": "2025-04-11T15:51:36.000Z",
+      "slug": "who-we-are",
+      "status": "published",
+      "subHeaderA": "Heading A",
+      "subbheaderB": [
+        {
+          "label": "subheaderA",
+          "value": "subheaderA"
+        }
+      ],
+      "subheaderA": "this is a test",
+      "title": "cat"
+    },
+    {
+      "__outstatic": {
+        "commit": "446a749fd04568191538d043f4d33cb6a61fccb9",
         "hash": "2688850827",
         "path": "outstatic/content/teams/art.md"
       },
@@ -22,7 +50,7 @@
     },
     {
       "__outstatic": {
-        "commit": "0d1a8b4d5cd2f7b8f42da6c470460bc9af478f58",
+        "commit": "55052318ffbfa47ce301b5dd50a58e4ebbe5e17a",
         "hash": "3453544858",
         "path": "outstatic/content/teams/systems.md"
       },
@@ -40,43 +68,7 @@
     },
     {
       "__outstatic": {
-        "commit": "466a2f09f5be39ea4da35ea1187e65780cb725ee",
-        "hash": "3543684936",
-        "path": "outstatic/content/teams/narrative.md"
-      },
-      "author": {
-        "name": "samsaq",
-        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
-      },
-      "collection": "teams",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2025-03-07T21:44:42.584Z",
-      "slug": "narrative",
-      "status": "published",
-      "title": "Narrative"
-    },
-    {
-      "__outstatic": {
-        "commit": "f9acbadb45559b2d5dc0b01c4c73948a4c23bbe9",
-        "hash": "3783461049",
-        "path": "outstatic/content/teams/design.md"
-      },
-      "author": {
-        "name": "samsaq",
-        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
-      },
-      "collection": "teams",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2025-03-07T21:45:03.327Z",
-      "slug": "design",
-      "status": "published",
-      "title": "Design"
-    },
-    {
-      "__outstatic": {
-        "commit": "cea76f39f8158121780b55a3be1a48fabbe36b4b",
+        "commit": "5cffd2807fe9cabaa4fc141d87fb9a44a2ce35f0",
         "hash": "432325455",
         "path": "outstatic/content/teams/sound.md"
       },
@@ -94,7 +86,25 @@
     },
     {
       "__outstatic": {
-        "commit": "fd4f486832ab99b1f9593da922b701c8d491d2b2",
+        "commit": "946560c216b9c95376d85023b851cdb7f8f401a3",
+        "hash": "3543684936",
+        "path": "outstatic/content/teams/narrative.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "teams",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2025-03-07T21:44:42.584Z",
+      "slug": "narrative",
+      "status": "published",
+      "title": "Narrative"
+    },
+    {
+      "__outstatic": {
+        "commit": "a697bf5c08519ac5a9facd3e8af9ed7d26e899b9",
         "hash": "1832217228",
         "path": "outstatic/content/teams/marketing.md"
       },
@@ -112,21 +122,21 @@
     },
     {
       "__outstatic": {
-        "commit": "b6657a74c57ad9b9c28cef5c80586f5b44010afc",
-        "hash": "3338773438",
-        "path": "outstatic/content/about/who-we-are.md"
+        "commit": "3262a50d5a8c77d862fcc8d4dc7ee1c2c5622304",
+        "hash": "3783461049",
+        "path": "outstatic/content/teams/design.md"
       },
       "author": {
-        "name": "Alvin Ton",
-        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
       },
-      "collection": "about",
-      "coverImage": "/images/filler-image-cwNT.jpg",
-      "description": "About page for VGDC",
-      "publishedAt": "2025-04-11T15:51:36.000Z",
-      "slug": "who-we-are",
+      "collection": "teams",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2025-03-07T21:45:03.327Z",
+      "slug": "design",
       "status": "published",
-      "title": "care"
+      "title": "Design"
     }
   ]
 }
