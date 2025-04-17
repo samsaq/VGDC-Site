@@ -1,6 +1,6 @@
 {
   "commit": "52b31fd5dbc7ff1aec8c1531b761aa44ef97cc50",
-  "generated": "2025-04-17T08:35:28.157Z",
+  "generated": "2025-04-17T08:36:02.644Z",
   "metadata": [
     {
       "__outstatic": {
@@ -113,7 +113,7 @@
     {
       "__outstatic": {
         "commit": "52b31fd5dbc7ff1aec8c1531b761aa44ef97cc50",
-        "hash": "3902967256",
+        "hash": "1389571245",
         "path": "outstatic/content/about/who-we-are.md"
       },
       "author": {
@@ -124,7 +124,7 @@
       "contentA": "",
       "coverImage": "/images/filler-image-cwNT.jpg",
       "description": "About page for VGDC",
-      "headingA": "Heading 1",
+      "headingA": "Heading",
       "publishedAt": "2025-04-11T15:51:36.000Z",
       "slug": "who-we-are",
       "status": "published",
