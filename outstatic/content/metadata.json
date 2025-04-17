@@ -1,6 +1,6 @@
 {
-  "commit": "0cc768f1c65dc6ce8876e25ddf44d14a06ffe26d",
-  "generated": "2025-04-17T08:44:16.443Z",
+  "commit": "32d2a3c6d37e83fcef6b4087564e496a88179f8f",
+  "generated": "Thu, 17 Apr 2025 08:44:23 GMT",
   "metadata": [
     {
       "__outstatic": {
@@ -19,6 +19,34 @@
       "slug": "art",
       "status": "published",
       "title": "Art"
+    },
+    {
+      "__outstatic": {
+        "commit": "acbbaac9aa2b344bd47c0a851d0fed81bfbcba9c",
+        "hash": "1009742093",
+        "path": "outstatic/content/about/who-we-are.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "about",
+      "contentA": "",
+      "coverImage": "/images/filler-image-cwNT.jpg",
+      "description": "About page for VGDC",
+      "headingA": "Heading 1",
+      "publishedAt": "2025-04-11T15:51:36.000Z",
+      "slug": "who-we-are",
+      "status": "published",
+      "subHeaderA": "Heading A",
+      "subbheaderB": [
+        {
+          "label": "subheaderA",
+          "value": "subheaderA"
+        }
+      ],
+      "subheaderA": "this is a test",
+      "title": "cat"
     },
     {
       "__outstatic": {
@@ -109,34 +137,6 @@
       "slug": "design",
       "status": "published",
       "title": "Design"
-    },
-    {
-      "__outstatic": {
-        "commit": "0cc768f1c65dc6ce8876e25ddf44d14a06ffe26d",
-        "hash": "1009742093",
-        "path": "outstatic/content/about/who-we-are.md"
-      },
-      "author": {
-        "name": "Alvin Ton",
-        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
-      },
-      "collection": "about",
-      "contentA": "",
-      "coverImage": "/images/filler-image-cwNT.jpg",
-      "description": "About page for VGDC",
-      "headingA": "Heading 1",
-      "publishedAt": "2025-04-11T15:51:36.000Z",
-      "slug": "who-we-are",
-      "status": "published",
-      "subHeaderA": "Heading A",
-      "subbheaderB": [
-        {
-          "label": "subheaderA",
-          "value": "subheaderA"
-        }
-      ],
-      "subheaderA": "this is a test",
-      "title": "cat"
     }
   ]
 }
