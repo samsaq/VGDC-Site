@@ -1,6 +1,6 @@
 {
-  "commit": "32aaf20a44121dacc047dbd4ee4ad85326c313c0",
-  "generated": "2025-04-17T07:38:15.079Z",
+  "commit": "19a93b4a5dd989c951f2ca6ae071cf5a6ee5e6ef",
+  "generated": "2025-04-17T07:39:22.765Z",
   "metadata": [
     {
       "__outstatic": {
@@ -112,8 +112,8 @@
     },
     {
       "__outstatic": {
-        "commit": "32aaf20a44121dacc047dbd4ee4ad85326c313c0",
-        "hash": "3669490547",
+        "commit": "19a93b4a5dd989c951f2ca6ae071cf5a6ee5e6ef",
+        "hash": "323104295",
         "path": "outstatic/content/about/who-we-are.md"
       },
       "author": {
@@ -121,12 +121,15 @@
         "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
       },
       "collection": "about",
+      "contentA": "",
       "coverImage": "/images/filler-image-cwNT.jpg",
       "description": "About page for VGDC",
       "publishedAt": "2025-04-11T15:51:36.000Z",
       "slug": "who-we-are",
       "status": "published",
       "subHeaderA": "Heading A",
+      "subbheaderB": [
+      ],
       "subheaderA": "this is a test",
       "title": "car"
     }
