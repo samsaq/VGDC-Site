@@ -10,8 +10,8 @@
       "title": "title"
     },
     "subheaderA": {
-      "required": false,
-      "description": "",
+      "required": true,
+      "description": "header1",
       "fieldType": "String",
       "dataType": "string",
       "title": "SubheaderA"
