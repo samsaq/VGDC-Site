@@ -5,32 +5,28 @@ interface About {
     title: string;
     content: string;
     coverImage?: string;
+    [key: string]: unknown;
   }
 export default function About()
 {
-    const [about, setAbout] = useState("");
+    const [aboutPage, setAboutPage] = useState<About>();
+    const [selectedAboutPage, setSelectedAboutPage] = useState("");
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
-        async function fetchAbout()
-        {
-            try
-            {
-                const data = await getAboutData();
-                {
-
-                }
-            }
-            catch(error)
-            {
-                console.error("Error fetch about page", error);
-            }
+        async function fetchAbout() {
+          const data = await getAboutData();
+          setAboutPage(data);
+          setLoading(false);
         }
-    }, []);
+        fetchAbout();
+      }, []);
     return(
-        <div className="margin=0 p-5"> {/* Page container*/}
+        <section className="margin=0 p-5"> {/* Page container*/}
             <div>{/*Non-header container*/}
+
                 <div className="flex items-center justify-center pt-20 pb-10">{/* Title Container*/}
                     <h1 className="font-outfit font-bold text-4xl text-red-600"> 
-                        Who We Are
+                        {aboutPage.title}
                     </h1>
                 </div>
                 <div className="font-outfit font-bold pb-5">{/* Subheader 1 container*/}
@@ -44,8 +40,10 @@ export default function About()
                 <div className="flex flex-col md:flex-row h-auto"> 
                     {/* Subheader 2 Split container */}
                     <div className="w-full md:w-1/2">
-                        
-                    </div>
+                    {aboutPage.length > 0 && (
+                        <img src={aboutPage[0].coverImage} alt="Cover" />
+                        )}
+                      </div>
                     <div className="w-full md:w-1/2 font-outfit font-bold p-5">
                         <h1 className="text-gray-500 text-2xl pb-2"> {/* Reduced padding */}
                         Sub Header 2
@@ -80,6 +78,6 @@ export default function About()
                     </div>
 
             </div>
-        </div>
+        </section>
     )
 }

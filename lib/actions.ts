@@ -8,5 +8,5 @@ export async function getTeamsData() {
 }
 export async function getAboutData(){
   const about = getDocuments("about", ["title", "content", "coverImage"]);
-  return about;
+  return about[0];
 }
