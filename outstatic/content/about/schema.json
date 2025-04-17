@@ -28,6 +28,13 @@
           "label": "subheaderA"
         }
       ]
+    },
+    "headingA": {
+      "required": true,
+      "description": "",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "headingA"
     }
   }
 }
