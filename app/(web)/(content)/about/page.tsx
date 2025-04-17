@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { getAboutData } from "@/lib/actions";
 interface About {
     title: string;
+    headingA: string;
     content: string;
     coverImage?: string;
     [key: string]: unknown;
@@ -31,7 +32,7 @@ export default function About()
                 </div>
                 <div className="font-outfit font-bold pb-5">{/* Subheader 1 container*/}
                     <h1 className="text-gray-500 text-2xl py-5">
-                        
+                        {aboutPage?.headingA}
                     </h1>
                     <p className="text-gray-500 text-xl">
                     {aboutPage?.content}
