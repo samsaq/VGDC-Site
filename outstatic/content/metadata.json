@@ -1,6 +1,6 @@
 {
-  "commit": "e961cfc7d6e859b388ccb60111fb8960278eb910",
-  "generated": "2025-04-17T06:56:49.261Z",
+  "commit": "b6657a74c57ad9b9c28cef5c80586f5b44010afc",
+  "generated": "2025-04-17T07:02:50.439Z",
   "metadata": [
     {
       "__outstatic": {
@@ -112,7 +112,7 @@
     },
     {
       "__outstatic": {
-        "commit": "e961cfc7d6e859b388ccb60111fb8960278eb910",
+        "commit": "b6657a74c57ad9b9c28cef5c80586f5b44010afc",
         "hash": "3338773438",
         "path": "outstatic/content/about/who-we-are.md"
       },
