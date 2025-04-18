@@ -1,8 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { getAboutData } from "@/lib/actions";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 
 interface About {
     title: string;
