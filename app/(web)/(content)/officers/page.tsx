@@ -1,13 +1,8 @@
 "use client";
 import EmblaCarousel from "@/components/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
-import { useCallback, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { EmblaCarouselType } from "embla-carousel"
-import {
-    PrevButton,
-    NextButton,
-    usePrevNextButtons
-  } from '@/components/carouselButtons'
 const images = [
     "https://preview.redd.it/uni-the-cat-v0-bcqh4egtg40c1.jpg?width=640&crop=smart&auto=webp&s=a872636b5172aefa188065947477f5d809f2ab35",
     "https://preview.redd.it/uni-the-cat-v0-cyacndgtg40c1.jpg?width=1080&crop=smart&auto=webp&s=22ed4b7c9e400ab7a56531e2e75be2a10251227e",
@@ -22,10 +17,9 @@ export default function officers()
     const OPTIONS: EmblaOptionsType = {};
     
     return(
-        <div>{/*Page container */}
-             <div>{/*Non navbar container*/}
+        <section className="overflow-y-auto">{/*Page container */}
                 <div>
-                <div className="w-full max-w-[800px] h-auto overflow-hidden flex justify-center items-center mx-auto">
+                <div className="max-w-900 h-auto overflow-hidden display-flex justify-center items-center mx-auto">
                     <EmblaCarousel slides={SLIDES} options={OPTIONS} setEmblaApi={setEmblaApi}/>
                 </div>
                     <div className="w-1/10 flex justify-center py-10">{/*select line container*/}
@@ -45,13 +39,13 @@ export default function officers()
                         </div>
                         <div className="w-1/3 flex justify-center px-2 space-x-4">
                         <button
-                            className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl"
+                            className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl hover:bg-orange-500"
                             onClick={() => emblaApi?.scrollPrev()}
                         >
                             <span>&lt;</span>
                         </button>
                         <button
-                            className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl"
+                            className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl hover:bg-orange-500"
                             onClick={() => emblaApi?.scrollNext()}
                         >
                             <span>&gt;</span>
@@ -59,7 +53,6 @@ export default function officers()
                         </div>
                     </div>
                 </div>
-             </div>
-        </div>
+        </section>
     )
 }

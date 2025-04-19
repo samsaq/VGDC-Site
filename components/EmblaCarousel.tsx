@@ -27,14 +27,14 @@ const EmblaCarousel: React.FC<PropType> = ({slides, options, setEmblaApi}) => {
 
   return (
     <section className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
+      <div className="embla__viewport " ref={emblaRef}>
         <div className="embla__container">
         {slides.map((src, index) => (
-            <div className="embla__slide flex-[0_0_100%] px-2" key={index}>
+            <div className="embla__slide" key={index}>
               <img
                 src={src}
                 alt={`Slide ${index}`}
-                className="w-full h-[300px] object-cover rounded-xl"
+                className="rounded-xl h-100 w-100"
               />
             </div>
           ))}

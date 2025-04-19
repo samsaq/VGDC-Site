@@ -94,17 +94,6 @@
   min-width: 0;
   padding-left: var(--slide-spacing);
 }
-.embla__slide__number {
-  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  border-radius: 1.8rem;
-  font-size: 4rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--slide-height);
-  user-select: none;
-}
 .embla__controls {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -140,11 +129,3 @@
   align-items: center;
   justify-content: center;
 }
-.embla__button:disabled {
-  color: var(--detail-high-contrast);
-}
-.embla__button__svg {
-  width: 35%;
-  height: 35%;
-}
-
