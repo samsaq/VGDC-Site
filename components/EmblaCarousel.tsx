@@ -1,19 +1,17 @@
-import React from 'react'
-import { EmblaOptionsType } from 'embla-carousel'
+import React, { useEffect } from 'react'
+import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
 import {
-  PrevButton,
-  NextButton,
   usePrevNextButtons
 } from './carouselButtons'
 import useEmblaCarousel from 'embla-carousel-react'
-import "@/components/embla.css"
+
 type PropType = {
-  slides: number[]
+  slides: string[]
   options?: EmblaOptionsType
+  setEmblaApi: (embla: EmblaCarouselType) => void
 }
 
-const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props
+const EmblaCarousel: React.FC<PropType> = ({slides, options, setEmblaApi}) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
   const {
@@ -23,22 +21,23 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onNextButtonClick
   } = usePrevNextButtons(emblaApi)
 
+  useEffect(() => {
+    if (emblaApi) setEmblaApi(emblaApi)
+  }, [emblaApi, setEmblaApi]);
+
   return (
     <section className="embla">
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
+        {slides.map((src, index) => (
+            <div className="embla__slide flex-[0_0_100%] px-2" key={index}>
+              <img
+                src={src}
+                alt={`Slide ${index}`}
+                className="w-full h-[300px] object-cover rounded-xl"
+              />
             </div>
           ))}
-        </div>
-      </div>
-
-      <div className="w-1/3 flex justify-end px-2 space-x-4">
-        <div className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>
     </section>
