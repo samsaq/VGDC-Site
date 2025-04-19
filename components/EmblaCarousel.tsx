@@ -1,37 +1,47 @@
-// components/EmblaCarousel.tsx
-import React, { useEffect } from 'react'
+import React from 'react'
+import { EmblaOptionsType } from 'embla-carousel'
+import {
+  PrevButton,
+  NextButton,
+  usePrevNextButtons
+} from './carouselButtons'
 import useEmblaCarousel from 'embla-carousel-react'
-import { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel'
-
+import "@/components/embla.css"
 type PropType = {
-  slides: string[]
+  slides: number[]
   options?: EmblaOptionsType
-  setEmblaApi: (api: EmblaCarouselType | null) => void
 }
 
-const EmblaCarousel: React.FC<PropType> = ({ slides, options, setEmblaApi }) => {
+const EmblaCarousel: React.FC<PropType> = (props) => {
+  const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
-  useEffect(() => {
-    if (emblaApi) {
-      setEmblaApi(emblaApi)
-    }
-  }, [emblaApi, setEmblaApi])
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick
+  } = usePrevNextButtons(emblaApi)
 
   return (
-    <div className="overflow-hidden" ref={emblaRef}>
-      <div className="embla__container flex">
-        {slides.map((src, index) => (
-          <div className="embla__slide" key={index}>
-            <img
-              src={src}
-              alt={`Slide ${index}`}
-              className="w-[400px] h-[300px] object-cover rounded-xl"
-            />
-          </div>
-        ))}
+    <section className="embla">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="embla__container">
+          {slides.map((index) => (
+            <div className="embla__slide" key={index}>
+              <div className="embla__slide__number">{index + 1}</div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+
+      <div className="w-1/3 flex justify-end px-2 space-x-4">
+        <div className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
+      </div>
+    </section>
   )
 }
 

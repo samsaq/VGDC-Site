@@ -1,28 +1,40 @@
 "use client";
 import EmblaCarousel from "@/components/EmblaCarousel";
-import { EmblaCarouselType } from "embla-carousel";
+import { EmblaOptionsType } from "embla-carousel";
 import { useCallback, useState, useEffect } from "react";
-import carouselBs from '@/components/carouselBs'
+import {
+    PrevButton,
+    NextButton,
+    usePrevNextButtons
+  } from '@/components/carouselButtons'
 export default function officers()
 {   
-    const images = [
-        "https://preview.redd.it/uni-the-cat-v0-0e7apdgtg40c1.jpg?width=640&crop=smart&auto=webp&s=a148184e7a6da6518c67322a434d0badc4137b8d",
-        "https://preview.redd.it/uni-the-cat-v0-vh7u3egtg40c1.jpg?width=640&crop=smart&auto=webp&s=25a6d3fe7e9ee1e77139660d77e57736188d7fdb",
-        "https://preview.redd.it/uni-the-cat-v0-bcqh4egtg40c1.jpg?width=1080&crop=smart&auto=webp&s=15f7e5307db8582cea81239a4f8b70148dd604c6",
-        "https://preview.redd.it/uni-the-cat-v0-9ckwsdgtg40c1.jpg?width=1080&crop=smart&auto=webp&s=07ec6059ec16ed946fa9bf99ea89f5e59eccadb2",
-        "https://preview.redd.it/uni-the-cat-v0-xzybtdgtg40c1.jpg?width=1080&crop=smart&auto=webp&s=a605955db06a97fdcf507cedc9bb9d2f4cd69dad",
-    ]
-    const SLIDES = Array.from(images);
+    const OPTIONS: EmblaOptionsType = {};
+    const SLIDE_COUNT = 10;
+    const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
   
-    const [emblaApi, setEmblaApi] = useState<EmblaCarouselType | null>(null)
-    
+    const [emblaApi, setEmblaApi] = useState<any>(null);
+  
+    useEffect(() => {
+      if (emblaApi) {
+        emblaApi.reInit();
+      }
+    }, [emblaApi]);
+  
+    const nextSlide = useCallback(() => {
+      if (emblaApi) emblaApi.scrollNext();
+    }, [emblaApi]);
+  
+    const prevSlide = useCallback(() => {
+      if (emblaApi) emblaApi.scrollPrev();
+    }, [emblaApi]);
     
     return(
-        <section className="m-0 overflow-y-auto max-h-full px-5">
-            <div>{/*Non navbar container*/}
+        <div>{/*Page container */}
+             <div>{/*Non navbar container*/}
                 <div>
                 <div className="w-full max-w-[800px] h-auto overflow-hidden flex justify-center items-center mx-auto">
-                    <EmblaCarousel slides={images} setEmblaApi={setEmblaApi}/>
+                    <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
                 </div>
                     <div className="w-1/10 flex justify-center py-10">{/*select line container*/}
                         <div className="h-[4px] w-[150px] bg-orange-400"></div>
@@ -40,12 +52,17 @@ export default function officers()
                             </h1>
                         </div>
                         <div className="w-1/3 flex justify-center px-2 space-x-4">
-                           
+                            <button className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl">
+                                <span>&lt;</span>
+                            </button>
+                            <button className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl">
+                                <span className="text-light"> &gt; </span>
+                            </button>
                         </div>
                     </div>
                 </div>
              </div>
-        </section>
+        </div>
     )
    
 }
