@@ -5,7 +5,6 @@ import { SideNav } from "@/components/sideNav";
 import { getTeamsData } from "@/lib/actions";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { image } from "@nextui-org/theme";
 
 interface Team {
   title: string;
