@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface SideNavProps {
   items: {
@@ -20,6 +20,23 @@ export const SideNav: React.FC<SideNavProps> = ({
   const [selectedItem, setSelectedItem] = useState<string>(
     (defaultSelected ?? items[0]?.label) || "",
   );
+  const [isMinified, setIsMinified] = useState<boolean>(false);
+
+  // Check window size on mount and resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMinified(window.innerWidth < 640);
+    };
+
+    // Set initial state
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const sortedItems = items.sort((a, b) => a.label.localeCompare(b.label));
 
@@ -31,12 +48,12 @@ export const SideNav: React.FC<SideNavProps> = ({
   };
 
   return (
-    <nav className="flex h-full w-full flex-col justify-items-start gap-0 overflow-y-auto text-3xl">
+    <nav className="flex h-full w-full flex-col justify-items-start gap-0 overflow-y-auto sm:text-xl md:text-2xl lg:text-3xl">
       {sortedItems.map((item, index) => (
         <button
           key={item.label}
           onClick={() => handleItemClick(item.label)}
-          className={`group relative w-full flex-1 p-6 px-12 text-center ${
+          className={`group relative w-full flex-1 p-2 px-4 text-center sm:p-3 sm:px-6 md:p-4 md:px-8 lg:p-6 lg:px-12 ${
             index !== sortedItems.length - 1 ? "border-b-1 border-black" : "" //so the last item doesn't have a border
           }`}
           style={{
@@ -53,13 +70,13 @@ export const SideNav: React.FC<SideNavProps> = ({
             }}
           />
           <span
-            className="relative z-10"
+            className="relative z-10 truncate"
             style={{
               color: selectedItem === item.label ? "white" : "inherit",
               transition: "color 0.3s ease-in-out",
             }}
           >
-            {item.label}
+            {isMinified ? item.label.charAt(0) : item.label}
           </span>
         </button>
       ))}

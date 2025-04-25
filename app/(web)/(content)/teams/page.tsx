@@ -121,8 +121,8 @@ export default function Teams() {
               {/* Check if content has any headers */}
               {/^#{1,3}\s.+$/m.test(currentTeam.content) ? (
                 <>
-                  <div className="mb-8 flex flex-row items-start gap-6">
-                    <div className="prose prose-sm flex-1">
+                  <div className="mb-8 flex flex-col items-center gap-6 md:flex-row md:items-start">
+                    <div className="prose prose-sm order-2 w-full md:order-1 md:flex-1">
                       {/* Display text up to the first heading */}
                       {currentTeam.content.match(/^[^#].*$/m) && (
                         <ReactMarkdown
@@ -155,7 +155,7 @@ export default function Teams() {
                     <img
                       src={currentTeam.coverImage}
                       alt={currentTeam.title}
-                      className="mx-4 aspect-square w-72 shrink-0 rounded-2xl"
+                      className="order-1 mx-auto mb-4 aspect-square w-full max-w-[250px] shrink-0 rounded-2xl md:order-2 md:mx-4 md:mb-0 md:w-72"
                     />
                   </div>
 
@@ -208,8 +208,8 @@ export default function Teams() {
               ) : (
                 /* No headers - show content split by word count - defaults to 50 */
                 <>
-                  <div className="mb-8 flex flex-row items-start gap-6">
-                    <div className="prose prose-sm flex-1">
+                  <div className="mb-8 flex flex-col items-center gap-6 md:flex-row md:items-start">
+                    <div className="prose prose-sm order-2 w-full md:order-1 md:flex-1">
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         components={components}
@@ -225,7 +225,7 @@ export default function Teams() {
                     <img
                       src={currentTeam.coverImage}
                       alt={currentTeam.title}
-                      className="aspect-square w-64 shrink-0 rounded-2xl"
+                      className="order-1 mx-auto mb-4 aspect-square w-full max-w-[250px] shrink-0 rounded-2xl md:order-2 md:mx-4 md:mb-0 md:w-64"
                     />
                   </div>
                   {currentTeam.content.split(/\s+/).length > 50 && (
@@ -259,7 +259,7 @@ export default function Teams() {
 
   return (
     <section className="relative z-10 flex h-full w-full flex-row overflow-hidden">
-      <div className="flex h-full min-w-[25%]">
+      <div className="h-full w-[70px] min-w-[70px] sm:w-auto sm:min-w-[25%]">
         <SideNav
           items={teams.map((team) => ({
             label: team.title,
