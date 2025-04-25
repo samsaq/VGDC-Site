@@ -5,6 +5,7 @@ import { SideNav } from "@/components/sideNav";
 import { getTeamsData } from "@/lib/actions";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { image } from "@nextui-org/theme";
 
 interface Team {
   title: string;
@@ -103,12 +104,15 @@ export default function Teams() {
       td: ({ ...props }) => (
         <td className="border-t border-gray-200 px-3 py-2" {...props} />
       ),
+      img: ({ ...props }) => (
+        <img className="rounded-4xl p-8 align-middle" {...props} />
+      ),
     };
 
     return (
       <div className="flex h-full w-full flex-col items-center overflow-y-auto">
-        <div className="w-full px-8">
-          <h2 className="mb-4 w-full text-center text-2xl font-bold text-warning-alternative">
+        <div className="w-full">
+          <h2 className="mb-4 w-full text-center text-4xl font-bold text-warning-alternative">
             {currentTeam.title}
           </h2>
 
@@ -151,7 +155,7 @@ export default function Teams() {
                     <img
                       src={currentTeam.coverImage}
                       alt={currentTeam.title}
-                      className="aspect-square w-64 shrink-0 rounded-2xl"
+                      className="mx-4 aspect-square w-72 shrink-0 rounded-2xl"
                     />
                   </div>
 
