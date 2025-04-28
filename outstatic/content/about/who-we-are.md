@@ -1,6 +1,6 @@
 ---
 title: 'Who we are'
-status: 'draft'
+status: 'published'
 author:
   name: 'Alvin Ton'
   picture: 'https://avatars.githubusercontent.com/u/157676125?v=4'
