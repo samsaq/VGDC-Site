@@ -1,5 +1,5 @@
 ---
-title: 'cat'
+title: 'Who we are'
 status: 'published'
 author:
   name: 'Alvin Ton'
