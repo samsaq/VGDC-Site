@@ -1,6 +1,6 @@
 ---
 title: 'cat'
-status: 'published'
+status: 'draft'
 author:
   name: 'Alvin Ton'
   picture: 'https://avatars.githubusercontent.com/u/157676125?v=4'
