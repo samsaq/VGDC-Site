@@ -38,13 +38,13 @@ export default function About() {
   // Custom components for ReactMarkdown with tailwind styling
   const components = {
     h1: ({ ...props }) => (
-      <h1 className="mb-2 text-3xl font-bold text-red-600" {...props} />
+      <h1 className="my-4 text-3xl font-bold text-red-600" {...props} />
     ),
     h2: ({ ...props }) => (
-      <h2 className="mb-1 text-2xl font-bold text-gray-500" {...props} />
+      <h2 className="my-4 text-2xl font-bold text-gray-500" {...props} />
     ),
     h3: ({ ...props }) => (
-      <h3 className="mb-1 text-xl font-semibold text-gray-500" {...props} />
+      <h3 className="my-4 text-xl font-semibold text-gray-500" {...props} />
     ),
     // Improve list rendering
     ul: ({ ...props }) => (
@@ -106,7 +106,7 @@ export default function About() {
     return (
       <div className="flex h-full w-full flex-col items-center overflow-y-auto">
         <div className="w-full max-w-5xl px-4">
-          <div className="flex items-center justify-center py-10">
+          <div className="flex items-center justify-center pb-10 pt-14">
             <h1 className="font-outfit text-4xl font-bold text-red-600">
               {aboutData.title || "Who We Are"}
             </h1>
@@ -122,7 +122,7 @@ export default function About() {
             </div>
           )}
 
-          <div className="prose prose-lg w-full max-w-none font-outfit">
+          <div className="prose prose-lg w-full max-w-none px-4 font-outfit">
             <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
               {aboutData.content || ""}
             </ReactMarkdown>
