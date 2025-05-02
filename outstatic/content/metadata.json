@@ -1,6 +1,6 @@
 {
-  "commit": "9bb19fd4f22292c2991ee7e671b9e86de91caa9d",
-  "generated": "2025-05-02T17:34:58.885Z",
+  "commit": "78d99b48c6ae4d58ca7bcbeff4be6e2b1d1f6fd6",
+  "generated": "2025-05-02T17:41:46.868Z",
   "metadata": [
     {
       "__outstatic": {
@@ -173,6 +173,24 @@
       "slug": "another-game",
       "status": "published",
       "title": "Another Game"
+    },
+    {
+      "__outstatic": {
+        "commit": "78d99b48c6ae4d58ca7bcbeff4be6e2b1d1f6fd6",
+        "hash": "12838465",
+        "path": "outstatic/content/games/404-game-not-found.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "games",
+      "coverImage": "/images/onslaught_alignment_chart-AxNT.png",
+      "description": "",
+      "publishedAt": "2025-05-02T16:53:04.781Z",
+      "slug": "404-game-not-found",
+      "status": "draft",
+      "title": "404 Game not found"
     }
   ]
 }
