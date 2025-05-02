@@ -297,7 +297,7 @@ export default function Teams() {
 
   return (
     <section className="relative z-10 flex h-full w-full flex-row overflow-hidden">
-      <div className="h-full w-[70px] min-w-[70px] sm:w-auto sm:min-w-[20%] lg:min-w-[18%] xl:min-w-[15%]">
+      <div className="h-full w-[70px] min-w-[70px] sm:w-auto sm:min-w-[20%] lg:min-w-[18%] xl:min-w-fit">
         <SideNavAlt
           items={teams.map((team) => ({
             label: team.title,
