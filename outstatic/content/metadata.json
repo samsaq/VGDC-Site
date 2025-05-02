@@ -1,6 +1,6 @@
 {
-  "commit": "78d99b48c6ae4d58ca7bcbeff4be6e2b1d1f6fd6",
-  "generated": "2025-05-02T17:41:46.868Z",
+  "commit": "538ee0fdd29f0d29a0d775b6432247bea2e5d027",
+  "generated": "2025-05-02T18:11:53.749Z",
   "metadata": [
     {
       "__outstatic": {
@@ -176,8 +176,8 @@
     },
     {
       "__outstatic": {
-        "commit": "78d99b48c6ae4d58ca7bcbeff4be6e2b1d1f6fd6",
-        "hash": "12838465",
+        "commit": "538ee0fdd29f0d29a0d775b6432247bea2e5d027",
+        "hash": "3798565978",
         "path": "outstatic/content/games/404-game-not-found.md"
       },
       "author": {
@@ -189,7 +189,7 @@
       "description": "",
       "publishedAt": "2025-05-02T16:53:04.781Z",
       "slug": "404-game-not-found",
-      "status": "draft",
+      "status": "published",
       "title": "404 Game not found"
     }
   ]
