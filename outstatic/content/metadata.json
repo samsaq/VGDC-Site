@@ -1,6 +1,6 @@
 {
-  "commit": "d5c3e0f6ed3b0d0a01fcc0b71d8db10b22d84c21",
-  "generated": "2025-05-02T17:24:28.445Z",
+  "commit": "9bb19fd4f22292c2991ee7e671b9e86de91caa9d",
+  "generated": "2025-05-02T17:34:58.885Z",
   "metadata": [
     {
       "__outstatic": {
@@ -155,6 +155,24 @@
       "slug": "game-mcgamerson",
       "status": "published",
       "title": "Game Mcgamerson"
+    },
+    {
+      "__outstatic": {
+        "commit": "9bb19fd4f22292c2991ee7e671b9e86de91caa9d",
+        "hash": "3194560486",
+        "path": "outstatic/content/games/another-game.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "games",
+      "coverImage": "/images/ubi_tarnished-I1ND.png",
+      "description": "",
+      "publishedAt": "2025-05-02T16:51:48.376Z",
+      "slug": "another-game",
+      "status": "published",
+      "title": "Another Game"
     }
   ]
 }
