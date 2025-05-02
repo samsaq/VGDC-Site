@@ -1,6 +1,6 @@
 {
-  "commit": "e550139b3656dbadeabfe467ffcb4059b7a1d161",
-  "generated": "2025-04-28T22:45:46.307Z",
+  "commit": "41e49792cb14c64ee6199295bebd40d3df572ffe",
+  "generated": "2025-05-02T17:20:51.585Z",
   "metadata": [
     {
       "__outstatic": {
@@ -137,6 +137,24 @@
       ],
       "subheaderA": "this is a test",
       "title": "Who we are"
+    },
+    {
+      "__outstatic": {
+        "commit": "41e49792cb14c64ee6199295bebd40d3df572ffe",
+        "hash": "2286945805",
+        "path": "outstatic/content/games/game-mcgamerson.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "games",
+      "coverImage": "/images/uni_the_mario-Y1ND.jpg",
+      "description": "",
+      "publishedAt": "2025-05-02T16:33:53.481Z",
+      "slug": "game-mcgamerson",
+      "status": "published",
+      "title": "Game Mcgamerson"
     }
   ]
 }
