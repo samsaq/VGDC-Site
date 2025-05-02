@@ -106,6 +106,12 @@ export default function Teams() {
       img: ({ ...props }) => (
         <img className="rounded-4xl p-8 align-middle" {...props} />
       ),
+      a: ({ ...props }) => (
+        <a
+          className="underline decoration-red-600 decoration-2 underline-offset-2 transition-colors hover:text-red-600"
+          {...props}
+        />
+      ),
     };
 
     return (
