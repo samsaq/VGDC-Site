@@ -7,7 +7,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { getGamesData } from "@/lib/actions";
 import Autoplay from "embla-carousel-autoplay";
 import { DotButton, useDotButton } from "@/components/CarouselDotButton";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatedContent } from "@/components/AnimatedContent";
 
 // Define the Game interface
 interface Game {
@@ -181,34 +181,22 @@ export default function Games() {
     return (
       <div className="h-full w-full overflow-y-auto">
         <div className="w-full">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentGame.slug || selectedIndex}
-              initial={{ opacity: 0, y: -5 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -5 }}
-              transition={{
-                duration: 0.2,
-                ease: "easeInOut",
-              }}
-              className="w-full"
-            >
-              <div className="flex items-center justify-center pb-6 pt-6">
-                <h1 className="font-outfit text-3xl font-bold text-success-alternative">
-                  {currentGame.title}
-                </h1>
-              </div>
+          <AnimatedContent uniqueKey={currentGame.slug || selectedIndex}>
+            <div className="flex items-center justify-center pb-6 pt-6">
+              <h1 className="font-outfit text-3xl font-bold text-success-alternative">
+                {currentGame.title}
+              </h1>
+            </div>
 
-              <div className="prose prose-lg w-full max-w-none px-4 font-outfit">
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  components={components}
-                >
-                  {currentGame.content || ""}
-                </ReactMarkdown>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+            <div className="prose prose-lg w-full max-w-none px-4 font-outfit">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={components}
+              >
+                {currentGame.content || ""}
+              </ReactMarkdown>
+            </div>
+          </AnimatedContent>
         </div>
       </div>
     );
