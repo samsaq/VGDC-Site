@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getAboutData } from "@/lib/actions";
+import { AnimatedContent } from "@/components/AnimatedContent";
 
 interface AboutData {
   title: string;
@@ -92,6 +93,12 @@ export default function About() {
     img: ({ ...props }) => (
       <img className="rounded-2xl p-4 align-middle" {...props} />
     ),
+    a: ({ ...props }) => (
+      <a
+        className="underline decoration-red-600 decoration-2 underline-offset-2 transition-colors hover:text-red-600"
+        {...props}
+      />
+    ),
   };
 
   const renderContent = () => {
@@ -105,7 +112,10 @@ export default function About() {
 
     return (
       <div className="flex h-full w-full flex-col items-center overflow-y-auto">
-        <div className="w-full max-w-5xl px-4">
+        <AnimatedContent
+          uniqueKey={aboutData.slug || aboutData.title}
+          className="w-full max-w-5xl px-4"
+        >
           <div className="flex items-center justify-center pb-10 pt-14">
             <h1 className="font-outfit text-4xl font-bold text-red-600">
               {aboutData.title || "Who We Are"}
@@ -127,7 +137,7 @@ export default function About() {
               {aboutData.content || ""}
             </ReactMarkdown>
           </div>
-        </div>
+        </AnimatedContent>
       </div>
     );
   };
