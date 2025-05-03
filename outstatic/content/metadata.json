@@ -1,35 +1,7 @@
 {
-  "commit": "747c1041d3e1234ed9ae7350b0e9d4ba6172e7e5",
-  "generated": "Thu, 17 Apr 2025 07:59:09 GMT",
+  "commit": "41e49792cb14c64ee6199295bebd40d3df572ffe",
+  "generated": "2025-05-02T17:20:51.585Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "3074368f778fd3e9c31263f607b0deee19068437",
-        "hash": "3902967256",
-        "path": "outstatic/content/about/who-we-are.md"
-      },
-      "author": {
-        "name": "Alvin Ton",
-        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
-      },
-      "collection": "about",
-      "contentA": "",
-      "coverImage": "/images/filler-image-cwNT.jpg",
-      "description": "About page for VGDC",
-      "headingA": "Heading 1",
-      "publishedAt": "2025-04-11T15:51:36.000Z",
-      "slug": "who-we-are",
-      "status": "published",
-      "subHeaderA": "Heading A",
-      "subbheaderB": [
-        {
-          "label": "subheaderA",
-          "value": "subheaderA"
-        }
-      ],
-      "subheaderA": "this is a test",
-      "title": "cat"
-    },
     {
       "__outstatic": {
         "commit": "446a749fd04568191538d043f4d33cb6a61fccb9",
@@ -47,24 +19,6 @@
       "slug": "art",
       "status": "published",
       "title": "Art"
-    },
-    {
-      "__outstatic": {
-        "commit": "55052318ffbfa47ce301b5dd50a58e4ebbe5e17a",
-        "hash": "3453544858",
-        "path": "outstatic/content/teams/systems.md"
-      },
-      "author": {
-        "name": "samsaq",
-        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
-      },
-      "collection": "teams",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2025-03-07T21:44:17.239Z",
-      "slug": "systems",
-      "status": "published",
-      "title": "Systems"
     },
     {
       "__outstatic": {
@@ -104,6 +58,24 @@
     },
     {
       "__outstatic": {
+        "commit": "55052318ffbfa47ce301b5dd50a58e4ebbe5e17a",
+        "hash": "3453544858",
+        "path": "outstatic/content/teams/systems.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "teams",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2025-03-07T21:44:17.239Z",
+      "slug": "systems",
+      "status": "published",
+      "title": "Systems"
+    },
+    {
+      "__outstatic": {
         "commit": "a697bf5c08519ac5a9facd3e8af9ed7d26e899b9",
         "hash": "1832217228",
         "path": "outstatic/content/teams/marketing.md"
@@ -137,6 +109,52 @@
       "slug": "design",
       "status": "published",
       "title": "Design"
+    },
+    {
+      "__outstatic": {
+        "commit": "e550139b3656dbadeabfe467ffcb4059b7a1d161",
+        "hash": "3809443896",
+        "path": "outstatic/content/about/who-we-are.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "about",
+      "contentA": "",
+      "coverImage": "/images/filler-image-cwNT.jpg",
+      "description": "About page for VGDC",
+      "headingA": "Heading 1",
+      "publishedAt": "2025-04-11T15:51:36.000Z",
+      "slug": "who-we-are",
+      "status": "published",
+      "subHeaderA": "Heading A",
+      "subbheaderB": [
+        {
+          "label": "subheaderA",
+          "value": "subheaderA"
+        }
+      ],
+      "subheaderA": "this is a test",
+      "title": "Who we are"
+    },
+    {
+      "__outstatic": {
+        "commit": "41e49792cb14c64ee6199295bebd40d3df572ffe",
+        "hash": "2286945805",
+        "path": "outstatic/content/games/game-mcgamerson.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "games",
+      "coverImage": "/images/uni_the_mario-Y1ND.jpg",
+      "description": "",
+      "publishedAt": "2025-05-02T16:33:53.481Z",
+      "slug": "game-mcgamerson",
+      "status": "published",
+      "title": "Game Mcgamerson"
     }
   ]
 }
