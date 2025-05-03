@@ -91,7 +91,7 @@ export default function About() {
       <td className="border-t border-gray-200 px-3 py-2" {...props} />
     ),
     img: ({ ...props }) => (
-      <img className="rounded-2xl p-4 align-middle" {...props} />
+      <img className="mx-auto rounded-2xl p-4 align-middle" {...props} />
     ),
     a: ({ ...props }) => (
       <a

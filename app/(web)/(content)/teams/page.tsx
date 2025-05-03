@@ -133,7 +133,7 @@ export default function Teams() {
       ),
       img: ({ ...props }) => (
         <img
-          className="rounded-4xl p-4 align-middle md:p-6 lg:p-8"
+          className="rounded-4xl mx-auto p-4 align-middle md:p-6 lg:p-8"
           {...props}
         />
       ),
