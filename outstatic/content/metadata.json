@@ -1,6 +1,6 @@
 {
-  "commit": "41e49792cb14c64ee6199295bebd40d3df572ffe",
-  "generated": "2025-05-02T17:20:51.585Z",
+  "commit": "538ee0fdd29f0d29a0d775b6432247bea2e5d027",
+  "generated": "2025-05-02T18:11:53.749Z",
   "metadata": [
     {
       "__outstatic": {
@@ -112,7 +112,7 @@
     },
     {
       "__outstatic": {
-        "commit": "e550139b3656dbadeabfe467ffcb4059b7a1d161",
+        "commit": "86c88580a0d8d4d7f6b2f7312cb2c796ac91dd65",
         "hash": "3809443896",
         "path": "outstatic/content/about/who-we-are.md"
       },
@@ -140,8 +140,8 @@
     },
     {
       "__outstatic": {
-        "commit": "41e49792cb14c64ee6199295bebd40d3df572ffe",
-        "hash": "2286945805",
+        "commit": "d5c3e0f6ed3b0d0a01fcc0b71d8db10b22d84c21",
+        "hash": "4130144352",
         "path": "outstatic/content/games/game-mcgamerson.md"
       },
       "author": {
@@ -149,12 +149,48 @@
         "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
       },
       "collection": "games",
-      "coverImage": "/images/uni_the_mario-Y1ND.jpg",
+      "coverImage": "/images/uni_the_mario-U2NT.jpg",
       "description": "",
-      "publishedAt": "2025-05-02T16:33:53.481Z",
+      "publishedAt": "2025-05-02T16:41:29.707Z",
       "slug": "game-mcgamerson",
       "status": "published",
       "title": "Game Mcgamerson"
+    },
+    {
+      "__outstatic": {
+        "commit": "9bb19fd4f22292c2991ee7e671b9e86de91caa9d",
+        "hash": "3194560486",
+        "path": "outstatic/content/games/another-game.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "games",
+      "coverImage": "/images/ubi_tarnished-I1ND.png",
+      "description": "",
+      "publishedAt": "2025-05-02T16:51:48.376Z",
+      "slug": "another-game",
+      "status": "published",
+      "title": "Another Game"
+    },
+    {
+      "__outstatic": {
+        "commit": "538ee0fdd29f0d29a0d775b6432247bea2e5d027",
+        "hash": "3798565978",
+        "path": "outstatic/content/games/404-game-not-found.md"
+      },
+      "author": {
+        "name": "samsaq",
+        "picture": "https://avatars.githubusercontent.com/u/8010506?v=4"
+      },
+      "collection": "games",
+      "coverImage": "/images/onslaught_alignment_chart-AxNT.png",
+      "description": "",
+      "publishedAt": "2025-05-02T16:53:04.781Z",
+      "slug": "404-game-not-found",
+      "status": "published",
+      "title": "404 Game not found"
     }
   ]
 }

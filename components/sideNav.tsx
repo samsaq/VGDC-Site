@@ -48,13 +48,13 @@ export const SideNav: React.FC<SideNavProps> = ({
   };
 
   return (
-    <nav className="flex h-full w-full flex-col justify-items-start gap-0 overflow-y-auto sm:text-xl md:text-2xl lg:text-3xl">
+    <nav className="flex h-full w-full flex-col justify-items-start gap-0 overflow-y-auto text-base sm:text-lg md:text-xl lg:text-2xl">
       {sortedItems.map((item, index) => (
         <button
           key={item.label}
           onClick={() => handleItemClick(item.label)}
-          className={`group relative w-full flex-1 p-2 px-4 text-center sm:p-3 sm:px-6 md:p-4 md:px-8 lg:p-6 lg:px-12 ${
-            index !== sortedItems.length - 1 ? "border-b-1 border-black" : "" //so the last item doesn't have a border
+          className={`group relative w-full flex-1 p-1 px-2 text-center sm:p-2 sm:px-4 md:p-3 md:px-6 lg:p-4 lg:px-8 ${
+            index !== sortedItems.length - 1 ? "border-b-1 border-black" : ""
           }`}
           style={{
             transition: "all 0.3s ease-in-out",
