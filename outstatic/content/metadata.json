@@ -1,6 +1,6 @@
 {
-  "commit": "222e183e5bd7d1129043265458bc080d0e5708db",
-  "generated": "2025-05-03T23:26:59.807Z",
+  "commit": "27dedb2448aca278cde072905c42352b24099f7c",
+  "generated": "2025-05-03T23:28:38.359Z",
   "metadata": [
     {
       "__outstatic": {
@@ -191,6 +191,24 @@
       "slug": "officer-2",
       "status": "published",
       "title": "Officer 2"
+    },
+    {
+      "__outstatic": {
+        "commit": "27dedb2448aca278cde072905c42352b24099f7c",
+        "hash": "3491586368",
+        "path": "outstatic/content/officers/officer-3.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "officers",
+      "coverImage": "https://preview.redd.it/royagjh3fq1c1.jpg?width=1080&crop=smart&auto=webp&s=1f313c88889bb23a2117f357dd2082e07db00aa4",
+      "description": "",
+      "publishedAt": "2025-05-03T22:45:12.728Z",
+      "slug": "officer-3",
+      "status": "draft",
+      "title": "Officer 3"
     }
   ]
 }
