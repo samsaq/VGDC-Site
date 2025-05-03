@@ -52,7 +52,3 @@ export async function getGamesData() {
     return [];
   }
 }
-export async function getAboutData(){
-  const about = getDocuments("about", ["title", "content", "coverImage"]);
-  return about[0];
-}

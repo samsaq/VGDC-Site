@@ -17,9 +17,9 @@ export default function officers()
     const OPTIONS: EmblaOptionsType = {};
     
     return(
-        <section className="overflow-y-auto">{/*Page container */}
+        <section className="flex overflow-hidden">{/*Page container */}
                 <div>
-                <div className="max-w-900 h-auto overflow-hidden display-flex justify-center items-center mx-auto">
+                <div className="">
                     <EmblaCarousel slides={SLIDES} options={OPTIONS} setEmblaApi={setEmblaApi}/>
                 </div>
                     <div className="w-1/10 flex justify-center py-10">{/*select line container*/}
