@@ -1,6 +1,6 @@
 {
-  "commit": "41e49792cb14c64ee6199295bebd40d3df572ffe",
-  "generated": "2025-05-02T17:20:51.585Z",
+  "commit": "2348060db11ea5a8f656dd8efdc53b7bdfcb7f54",
+  "generated": "2025-05-03T22:56:34.589Z",
   "metadata": [
     {
       "__outstatic": {
@@ -155,6 +155,24 @@
       "slug": "game-mcgamerson",
       "status": "published",
       "title": "Game Mcgamerson"
+    },
+    {
+      "__outstatic": {
+        "commit": "2348060db11ea5a8f656dd8efdc53b7bdfcb7f54",
+        "hash": "817088988",
+        "path": "outstatic/content/officers/officer-1.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "officers",
+      "coverImage": "/images/filler-image-cwnt-c1MT.jpg",
+      "description": "",
+      "publishedAt": "2025-05-03T21:54:32.001Z",
+      "slug": "officer-1",
+      "status": "draft",
+      "title": "Officer 1"
     }
   ]
 }
