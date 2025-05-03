@@ -1,6 +1,6 @@
 {
-  "commit": "27dedb2448aca278cde072905c42352b24099f7c",
-  "generated": "2025-05-03T23:28:38.359Z",
+  "commit": "75135ee56ab218e10ca4da559e9e93a816e6be24",
+  "generated": "2025-05-03T23:28:41.124Z",
   "metadata": [
     {
       "__outstatic": {
@@ -194,8 +194,8 @@
     },
     {
       "__outstatic": {
-        "commit": "27dedb2448aca278cde072905c42352b24099f7c",
-        "hash": "3491586368",
+        "commit": "75135ee56ab218e10ca4da559e9e93a816e6be24",
+        "hash": "797471832",
         "path": "outstatic/content/officers/officer-3.md"
       },
       "author": {
@@ -207,7 +207,7 @@
       "description": "",
       "publishedAt": "2025-05-03T22:45:12.728Z",
       "slug": "officer-3",
-      "status": "draft",
+      "status": "published",
       "title": "Officer 3"
     }
   ]
