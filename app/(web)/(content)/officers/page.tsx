@@ -74,7 +74,7 @@ export default function officers()
               />
             ),
             h2: ({ ...props }) => (
-              <h2 className="my-4 text-2xl font-bold text-gray-500" {...props} />
+              <h2 className="my-4 text-2xl font-bold text-gray-500 text-center" {...props} />
             ),
             h3: ({ ...props }) => (
               <h3 className="my-4 text-xl font-semibold text-gray-500" {...props} />
@@ -91,42 +91,6 @@ export default function officers()
                 {...props}
               />
             ),
-            code: ({ ...props }) => (
-              <code
-                className="rounded bg-gray-100 px-1 py-0.5 font-mono text-sm"
-                {...props}
-              />
-            ),
-            pre: ({ ...props }) => (
-              <pre
-                className="my-4 overflow-x-auto rounded bg-gray-100 p-3 font-mono text-sm"
-                {...props}
-              />
-            ),
-            table: ({ ...props }) => (
-              <div className="my-4 overflow-x-auto">
-                <table
-                  className="min-w-full divide-y divide-gray-300 text-sm"
-                  {...props}
-                />
-              </div>
-            ),
-            thead: ({ ...props }) => <thead className="bg-gray-100" {...props} />,
-            th: ({ ...props }) => (
-              <th className="px-3 py-2 text-left font-semibold" {...props} />
-            ),
-            td: ({ ...props }) => (
-              <td className="border-t border-gray-200 px-3 py-2" {...props} />
-            ),
-            img: ({ ...props }) => (
-              <img className="rounded-2xl p-4 align-middle" {...props} />
-            ),
-            a: ({ ...props }) => (
-              <a
-                className="underline decoration-success-alternative decoration-2 underline-offset-2 transition-colors hover:text-success-alternative"
-                {...props}
-              />
-            ),
           };
         
           const renderContent = () => {
@@ -139,7 +103,13 @@ export default function officers()
             const selectedOfficer = officers[selectedImage]; // Get the selected officer
             return (
                 <div>
-                    <strong className="text-xl text-gray-500">{selectedOfficer?.content}</strong>
+                    <AnimatedContent uniqueKey={officers?.slug || selectedImage }>
+                        <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        components={components}>
+                        {selectedOfficer?.content || ""}
+                        </ReactMarkdown>
+                    </AnimatedContent>
                 </div>
             );
         };
@@ -184,7 +154,7 @@ export default function officers()
                     </div>
                 </div>
             </div>
-            <div className="h-1/10 flex justify-center py-10">{/*select line container*/}
+            <div className="h-1/10 flex justify-center py-8">{/*select line container*/}
                 <div className="h-[4px] w-[150px] bg-orange-400"></div>
                 </div>
                 <div className="h-3/10 font-outfit 2xl:flex xl:flex lg:flex-row space-x-10">{/*triple split container*/}
@@ -192,12 +162,6 @@ export default function officers()
                         <h1 className=" font-semibold text-5xl">Meet our club officers</h1>
                     </div>
                     <div className="2xl:w-3/5 xl:w-full px-5 h-[300px] overflow-y-auto">{/*Officer info content */}
-                        {/*<div>
-                            <strong className="text-xl text-gray-500"></strong>
-                        </div>
-                        <h1 className="">
-                            {officers}
-                        </h1>*/}
                         {renderContent()}
                     </div>
                     {/*Nav Buttons */} 
