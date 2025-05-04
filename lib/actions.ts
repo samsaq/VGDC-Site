@@ -52,3 +52,20 @@ export async function getGamesData() {
     return [];
   }
 }
+
+export async function getOfficerData() {
+  try {
+    const db = await load();
+    const games = await db
+      .find({
+        collection: "officers",
+      })
+      .project(["title", "content", "coverImage", "slug"])
+      .toArray();
+
+    return games;
+  } catch (error) {
+    console.error("Error fetching officer data:", error);
+    return [];
+  }
+}

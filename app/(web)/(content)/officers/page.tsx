@@ -1,22 +1,24 @@
 "use client";
-import { EmblaOptionsType } from "embla-carousel";
 import { useState, useEffect, useRef } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import useEmblaCarousel from "embla-carousel-react";
+import { getOfficerData } from "@/lib/actions";
+import { DotButton, useDotButton } from "@/components/CarouselDotButton";
 import { AnimatedContent } from "@/components/AnimatedContent";
-import { EmblaCarouselType } from "embla-carousel"
-const images = [
-    "https://preview.redd.it/uni-the-cat-v0-bcqh4egtg40c1.jpg?width=640&crop=smart&auto=webp&s=a872636b5172aefa188065947477f5d809f2ab35",
-    "https://preview.redd.it/uni-the-cat-v0-cyacndgtg40c1.jpg?width=1080&crop=smart&auto=webp&s=22ed4b7c9e400ab7a56531e2e75be2a10251227e",
-    "https://preview.redd.it/uni-the-cat-v0-u6no4egtg40c1.jpg?width=640&crop=smart&auto=webp&s=8746765938b901e683e05e486e96bdbf39ee40f6",
-    "https://preview.redd.it/uni-the-cat-v0-9ckwsdgtg40c1.jpg?width=1080&crop=smart&auto=webp&s=07ec6059ec16ed946fa9bf99ea89f5e59eccadb2",
-    "https://preview.redd.it/uni-the-cat-v0-9oocldgtg40c1.jpg?width=1080&crop=smart&auto=webp&s=9e137de6fc71ac068d16a4a44d473a4e1eb5f725",
-]
+interface Officer {
+    title: string;
+    content: string;
+    coverImage?: string;
+    slug?: string;
+    [key: string]: unknown;
+  }
 export default function officers()
 {   
-    const SLIDES = Array.from(images);
-    const OPTIONS: EmblaOptionsType = {};
+    const [officers, setOfficers] = useState<Officer[]>([]);
     const [loading, setLoading] = useState(true);
     const contentSectionRef = useRef<HTMLDivElement>(null);
+    
     const [emblaRef, emblaApi] = useEmblaCarousel(
     {
         loop: false,
@@ -25,7 +27,27 @@ export default function officers()
         dragFree: false, //can use mouse to drag
         slidesToScroll: 1, //How many slides per scroll
     }
-    )
+    );
+    useEffect(() =>{ 
+        async function fetchOfficerData() 
+        {   
+            try 
+            {
+                const data = await getOfficerData();
+                setOfficers(data);
+            }
+            catch (error)
+            {
+                console.error("Error fetch officer data:", error);
+            }
+            finally
+            {
+                setLoading(false);
+            }
+        }
+        fetchOfficerData();
+    }, []);
+
     return(
         <section className="overflow-hidden">{/*Page container */}
             <div className="relative h-[350px] w-full sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px]">
@@ -35,12 +57,12 @@ export default function officers()
                         <div className="embla__slide flex min-w-0 flex-shrink-0 flex-grow-0 basis-full items-center justify-center">
                             <p>Loading...</p>
                         </div>
-                    ) : images.length === 0 ? (
+                    ) : officers.length === 0 ? (
                         <div className="embla__slide flex min-w-0 flex-shrink-0 flex-grow-0 basis-full items-center justify-center">
                             <p>No games available</p>
                         </div>
                                             ) : (
-                        images.map((officer, index) => (
+                        officers.map((officer, index) => (
                         <div
                         key={officer.slug || index}
                         className="embla__slide relative flex min-w-0 flex-shrink-0 flex-grow-0 basis-full items-center justify-center">
@@ -50,7 +72,7 @@ export default function officers()
                                         <img
                                             src={officer.coverImage}
                                             alt={officer.title}
-                                            className="max-h-full max-w-full object-contain"/>
+                                            className="max-h-full max-w-full object-contain rounded-xl"/>
                                     </div>
                                                     ) : (
                                     <div className="flex h-[90%] w-[90%] items-center justify-center rounded-lg bg-gray-200">
