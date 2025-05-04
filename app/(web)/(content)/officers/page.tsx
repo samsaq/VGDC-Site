@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -6,7 +7,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { getOfficerData } from "@/lib/actions";
 import { AnimatedContent } from "@/components/AnimatedContent";
 import ClassNames from "embla-carousel-class-names";
-import { select } from "@nextui-org/theme";
+import leftArrow from "@/public/left_arrow_nav_icon.svg";
 interface Officer {
     title: string;
     content: string;
@@ -20,7 +21,10 @@ export default function officers()
     const [loading, setLoading] = useState(true);
     const [selectedImage, setSelectedImage] = useState(0);
     const contentSectionRef = useRef<HTMLDivElement>(null);
-    
+
+    const [canScrollPrev, setCanScrollPrev] = useState(false);
+    const [canScrollNext, setCanScrollNext] = useState(false);
+
     const [emblaRef, emblaApi] = useEmblaCarousel(
     {
         loop: false,
@@ -59,13 +63,18 @@ export default function officers()
                 // Force a re-render to update the selected slide's opacity
                 setSelectedImage(emblaApi.selectedScrollSnap());
             };
-    
+            const updateScroll = () => {
+                setCanScrollPrev(emblaApi.canScrollPrev());
+                setCanScrollNext(emblaApi.canScrollNext());
+            }
             emblaApi.on("select", onSelect);
     
             return () => {
                 emblaApi.off("select", onSelect); // return full-opacity'd image
             };
+            emblaApi?.on("select")
         }, [emblaApi]);
+
         const components = {
             h1: ({ ...props }) => (
               <h1
@@ -74,7 +83,7 @@ export default function officers()
               />
             ),
             h2: ({ ...props }) => (
-              <h2 className="my-4 text-2xl font-bold text-gray-500 text-center" {...props} />
+              <h2 className="my-4 text-2xl font-bold text-gray-500 text-center" {...props}/>
             ),
             h3: ({ ...props }) => (
               <h3 className="my-4 text-xl font-semibold text-gray-500" {...props} />
@@ -101,13 +110,18 @@ export default function officers()
                 return <p className="text-center">Officer info not found</p>;
             }
             const selectedOfficer = officers[selectedImage]; // Get the selected officer
+            const contentWithTab = selectedOfficer?.content.replace(
+                "Major",
+                "&emsp;Major"
+            ); 
             return (
                 <div>
-                    <AnimatedContent uniqueKey={officers?.slug || selectedImage }>
+                    <AnimatedContent uniqueKey={officers.slug || selectedImage}>
                         <ReactMarkdown
-                        remarkPlugins={[remarkGfm]}
-                        components={components}>
-                        {selectedOfficer?.content || ""}
+                            remarkPlugins={[remarkGfm]}
+                            components={components}
+                        >
+                            {contentWithTab || ""}
                         </ReactMarkdown>
                     </AnimatedContent>
                 </div>
@@ -167,19 +181,25 @@ export default function officers()
                     {/*Nav Buttons */} 
                     
                     <div className="2xl:w-1/4 xl:w-1/4 lg:w-1/4 md:w-full flex justify-center px-2 space-x-4">
-    <button
-        className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl hover:bg-orange-500"
-        onClick={() => emblaApi?.scrollPrev()} // Tells the carousel to scroll to the left
-    >
-        <span>&lt;</span>
-    </button>
-    <button
-        className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl hover:bg-orange-500"
-        onClick={() => emblaApi?.scrollNext()} // Tells the carousel to scroll to the right
-    >
-        <span>&gt;</span>
-    </button>
-</div>
+                        <button
+                            className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl hover:bg-orange-500"
+                            onClick={() => emblaApi?.scrollPrev()} // Tells the carousel to scroll to the left
+                        >
+                            <Image
+                            src={leftArrow}
+                            alt="left Arrow"
+                            className="invert"/>
+                        </button>
+                        <button
+                            className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl hover:bg-orange-500"
+                            onClick={() => emblaApi?.scrollNext()} // Tells the carousel to scroll to the right
+                        >
+                            <Image
+                            src={leftArrow}
+                            alt="left Arrow"
+                            className="invert scale-x-[-1]"/>
+                        </button>
+                    </div>
                 </div>{/*End triple split container */}
         </section>
     )
