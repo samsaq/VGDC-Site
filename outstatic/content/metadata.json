@@ -1,6 +1,6 @@
 {
-  "commit": "aea174b3c23d5bbd8d7655e29a852b0d848fe9c5",
-  "generated": "2025-05-04T07:56:21.315Z",
+  "commit": "de55d8af640eaf439bc498feab2fd3202f2a5ff4",
+  "generated": "2025-05-04T07:56:39.182Z",
   "metadata": [
     {
       "__outstatic": {
@@ -176,24 +176,6 @@
     },
     {
       "__outstatic": {
-        "commit": "877de57eb56cec4b9830304b309e79f4c268e949",
-        "hash": "3147471115",
-        "path": "outstatic/content/officers/officer-1.md"
-      },
-      "author": {
-        "name": "Alvin Ton",
-        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
-      },
-      "collection": "officers",
-      "coverImage": "/images/filler-image-cwnt-c1MT.jpg",
-      "description": "officer 1",
-      "publishedAt": "2025-05-03T21:54:32.001Z",
-      "slug": "officer-1",
-      "status": "published",
-      "title": "Officer 1"
-    },
-    {
-      "__outstatic": {
         "commit": "aea174b3c23d5bbd8d7655e29a852b0d848fe9c5",
         "hash": "1721307506",
         "path": "outstatic/content/officers/officer-2.md"
@@ -209,6 +191,24 @@
       "slug": "officer-2",
       "status": "published",
       "title": "Officer 2"
+    },
+    {
+      "__outstatic": {
+        "commit": "de55d8af640eaf439bc498feab2fd3202f2a5ff4",
+        "hash": "3147471115",
+        "path": "outstatic/content/officers/officer-1.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "officers",
+      "coverImage": "/images/filler-image-cwnt-c1MT.jpg",
+      "description": "officer 1",
+      "publishedAt": "2025-05-03T21:54:32.001Z",
+      "slug": "officer-1",
+      "status": "published",
+      "title": "Officer 1"
     }
   ]
 }
