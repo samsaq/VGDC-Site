@@ -1,6 +1,6 @@
 {
-  "commit": "2a159164b3d5765dba23d1b99c7d4488b14356c9",
-  "generated": "2025-05-03T22:56:43.878Z",
+  "commit": "acf93ea9e825af5136971c63ac18d12acf0a97fa",
+  "generated": "2025-05-03T23:33:07.494Z",
   "metadata": [
     {
       "__outstatic": {
@@ -158,7 +158,43 @@
     },
     {
       "__outstatic": {
-        "commit": "2a159164b3d5765dba23d1b99c7d4488b14356c9",
+        "commit": "222e183e5bd7d1129043265458bc080d0e5708db",
+        "hash": "1420488940",
+        "path": "outstatic/content/officers/officer-2.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "officers",
+      "coverImage": "https://preview.redd.it/uni-the-cat-v0-cyacndgtg40c1.jpg?width=1080&crop=smart&auto=webp&s=22ed4b7c9e400ab7a56531e2e75be2a10251227e",
+      "description": "",
+      "publishedAt": "2025-05-03T22:16:36.013Z",
+      "slug": "officer-2",
+      "status": "published",
+      "title": "Officer 2"
+    },
+    {
+      "__outstatic": {
+        "commit": "75135ee56ab218e10ca4da559e9e93a816e6be24",
+        "hash": "797471832",
+        "path": "outstatic/content/officers/officer-3.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "officers",
+      "coverImage": "https://preview.redd.it/royagjh3fq1c1.jpg?width=1080&crop=smart&auto=webp&s=1f313c88889bb23a2117f357dd2082e07db00aa4",
+      "description": "",
+      "publishedAt": "2025-05-03T22:45:12.728Z",
+      "slug": "officer-3",
+      "status": "published",
+      "title": "Officer 3"
+    },
+    {
+      "__outstatic": {
+        "commit": "acf93ea9e825af5136971c63ac18d12acf0a97fa",
         "hash": "2996774419",
         "path": "outstatic/content/officers/officer-1.md"
       },
