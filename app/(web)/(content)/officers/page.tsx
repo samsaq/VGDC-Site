@@ -76,7 +76,7 @@ export default function officers()
             };
         }, [emblaApi]);
 
-        const components = {
+        const components = {//just in case officers want more nuance in officer info
             h1: ({ ...props }) => (
               <h1
                 className="my-4 text-3xl font-bold text-success-alternative"
@@ -84,7 +84,7 @@ export default function officers()
               />
             ),
             h2: ({ ...props }) => (
-              <h2 className="my-4 text-2xl font-bold text-gray-500 text-center" {...props}/>
+              <h2 className="my-4 text-2xl font-bold text-gray-500" {...props}/>
             ),
             h3: ({ ...props }) => (
               <h3 className="my-4 text-xl font-semibold text-gray-500" {...props} />
@@ -113,12 +113,25 @@ export default function officers()
             return (
                 <div>
                     <AnimatedContent uniqueKey={officers.slug || selectedImage}>
-                        <ReactMarkdown
-                            remarkPlugins={[remarkGfm]}
-                            components={components}
-                        >
-                            {officers.name}
-                        </ReactMarkdown>
+                        <div className="flex justify-center gap-4 xl-w-full lg-w-[1/2]">
+                            <div className="w-1/2 justify-center">
+                                <h2 className="text-gray-500 text-center font-bold text-2xl">
+                                    Name: {officers[selectedImage].name || ""}
+                                </h2>
+                            </div>
+                            <div className="w-1/2 justify-center">
+                                <h2 className="text-gray-500 text-center font-bold text-2xl">
+                                    Major: {officers[selectedImage].major || ""}
+                                </h2>
+                            </div>
+                        </div>
+                        <div>
+                            <ReactMarkdown
+                                remarkPlugins={[remarkGfm]}
+                                components={components}>
+                                    {officers[selectedImage].content || ""}
+                            </ReactMarkdown>
+                        </div>
                     </AnimatedContent>
                 </div>
             );
@@ -168,8 +181,8 @@ export default function officers()
                 <div className="h-[4px] w-[150px] bg-orange-400"></div>
                 </div>
                 <div className="h-3/10 font-outfit 2xl:flex xl:flex lg:flex-row space-x-10">{/*triple split container*/}
-                    <div className="2xl:w-1/4 xl:w-1/4 lg:w-full text-orange-400 pl-12">{/*caption header */}
-                        <h1 className=" font-semibold text-5xl">Meet our club officers</h1>
+                    <div className="2xl:w-1/4 xl:w-1/4 lg:w-full md:justify-center text-orange-400 pl-12">{/*caption header */}
+                        <h1 className=" font-semibold text-6xl">Meet our club officers</h1>
                     </div>
                     <div className="2xl:w-3/5 xl:w-full px-5 h-[300px] overflow-y-auto">{/*Officer info content */}
                         {renderContent()}
