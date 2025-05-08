@@ -7,7 +7,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import { getOfficerData } from "@/lib/actions";
 import { AnimatedContent } from "@/components/AnimatedContent";
 import ClassNames from "embla-carousel-class-names";
-import leftArrow from "@/public/left_arrow_nav_icon.svg";
+import whiteLeftArrow from "@/public/whiteLeftArrow.png";
+import orangeLeftArrow from "@/public/orangeLeftarrow.png";
 interface Officer {
     title: string;
     content: string;
@@ -24,8 +25,6 @@ export default function officers()
     const [selectedImage, setSelectedImage] = useState(0);
     const contentSectionRef = useRef<HTMLDivElement>(null);
 
-    const [canScrollPrev, setCanScrollPrev] = useState(false);
-    const [canScrollNext, setCanScrollNext] = useState(false);
 
     const [emblaRef, emblaApi] = useEmblaCarousel(
     {
@@ -65,10 +64,6 @@ export default function officers()
                 // Force a re-render to update the selected slide's opacity
                 setSelectedImage(emblaApi.selectedScrollSnap());
             };
-            const updateScroll = () => {
-                setCanScrollPrev(emblaApi.canScrollPrev());
-                setCanScrollNext(emblaApi.canScrollNext());
-            }
             emblaApi.on("select", onSelect);
     
             return () => {
@@ -95,6 +90,9 @@ export default function officers()
             ol: ({ ...props }) => (
               <ol className="mb-4 list-decimal space-y-1 pl-5" {...props} />
             ),
+            p: ({ ...props }) => (
+                <p className="mb-4 text-lg text-gray-500" {...props} />
+              ),
             blockquote: ({ ...props }) => (
               <blockquote
                 className="my-4 border-l-4 border-gray-300 pl-4 italic"
@@ -125,7 +123,7 @@ export default function officers()
                                 </h2>
                             </div>
                         </div>
-                        <div>
+                        <div className="overflow-y-scroll 2xl:h-[145px] ">{/*Make only info box scrollable; adjust length of box according to screen width*/}
                             <ReactMarkdown
                                 remarkPlugins={[remarkGfm]}
                                 components={components}>
@@ -137,9 +135,9 @@ export default function officers()
             );
         };
     return(
-        <section className="h-screen overflow-y-auto">{/*Page container */}
+        <section className="">{/*Page container */}
         {/*Carousel */}
-            <div className="relative h-3/5 w-full  flex">
+            <div className="relative h-3/5 w-full flex">
                 <div className="embla h-full w-full overflow-hidden" ref={emblaRef}>
                     <div className="embla__container flex h-full">
                     {loading ? (
@@ -154,7 +152,7 @@ export default function officers()
                         officers.map((officer, index) => (
                         <div
                         key={officer.slug || index}
-                        className={`embla__slide flex flex-grow-0 xl:min-w-[600px] xl:min-h-[600px] is-snapped is-in-view ${
+                        className={`embla__slide flex flex-grow-0 xl:min-w-[3/4]  ${
                             emblaApi?.selectedScrollSnap() === index ? "opacity-100" : "opacity-50"
                         }`}>
                             <div className=" h-full w-full items-center justify-center px-4 rounded-xl">
@@ -177,36 +175,38 @@ export default function officers()
                     </div>
                 </div>
             </div>
-            <div className="h-1/10 flex justify-center py-8">{/*select line container*/}
+            <div className="flex justify-center py-8">{/*select line container*/}
                 <div className="h-[4px] w-[150px] bg-orange-400"></div>
                 </div>
-                <div className="h-3/10 font-outfit 2xl:flex xl:flex lg:flex-row space-x-10">{/*triple split container*/}
-                    <div className="2xl:w-1/4 xl:w-1/4 lg:w-full md:justify-center text-orange-400 pl-12">{/*caption header */}
+                <div className="font-outfit 2xl:flex xl:flex lg:flex-row space-x-10 md:space-x-0 justify-center">{/*triple split container*/}
+                    <div className="xl:w-1/4 lg:w-full md:w-full md:text-center text-orange-400">{/*caption header */}
                         <h1 className=" font-semibold text-6xl">Meet our club officers</h1>
                     </div>
-                    <div className="2xl:w-3/5 xl:w-full px-5 h-[300px] overflow-y-auto">{/*Officer info content */}
+                    <div className="2xl:w-3/5 xl:w-full px-5">{/*Officer info content */}
                         {renderContent()}
                     </div>
                     {/*Nav Buttons */} 
-                    
-                    <div className="2xl:w-1/4 xl:w-1/4 lg:w-1/4 md:w-full flex justify-center px-2 space-x-4">
+                    <div className="2xl:w-1/4 xl:w-1/4 lg:w-full md:w-full flex justify-center space-x-4">
                         <button
-                            className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl hover:bg-orange-500"
-                            onClick={() => emblaApi?.scrollPrev()} // Tells the carousel to scroll to the left
+                            className={`rounded-full w-20 h-20 flex items-center justify-center ${
+                                emblaApi?.canScrollPrev() ? "bg-orange-400 hover:bg-orange-500" : "border-opacity-100 cursor-not-allowed"}`}// Use case when end of scrolling left
+                                onClick={() => emblaApi?.scrollPrev()} // Tells the carousel to scroll to the left
                         >
                             <Image
-                            src={leftArrow}
+                            src={emblaApi?.canScrollPrev() ? whiteLeftArrow : orangeLeftArrow}//change image according to scroll state
                             alt="left Arrow"
-                            className="invert"/>
+                            className="w-1/2"/>
                         </button>
                         <button
-                            className="bg-orange-400 rounded-full w-20 h-20 flex items-center justify-center text-white text-4xl hover:bg-orange-500"
-                            onClick={() => emblaApi?.scrollNext()} // Tells the carousel to scroll to the right
+                            className={`rounded-full w-20 h-20 flex items-center justify-center 
+                                text-white text-4xl- ${
+                                emblaApi?.canScrollNext() ? "bg-orange-400 hover:bg-orange-500" : "bg-white border-orange-400 cursor-not-allowed"}`}// Use case when end of scrolling right
+                                onClick={() => emblaApi?.scrollNext()} // Tells the carousel to scroll to the left
                         >
                             <Image
-                            src={leftArrow}
-                            alt="left Arrow"
-                            className="invert scale-x-[-1]"/>
+                            src={emblaApi?.canScrollNext() ? whiteLeftArrow : orangeLeftArrow}//change image according to scroll state
+                            alt="right Arrow"
+                            className="w-1/2 scale-x-[-1]"/>{/*Saving resources :b*/}
                         </button>
                     </div>
                 </div>{/*End triple split container */}
