@@ -60,7 +60,7 @@ export async function getOfficerData() {
       .find({
         collection: "officers",
       })
-      .project(["title", "content", "coverImage", "slug"])
+      .project(["title", "content", "coverImage", "slug", "name", "major"])
       .toArray();
 
     return games;

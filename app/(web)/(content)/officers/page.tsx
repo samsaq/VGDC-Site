@@ -13,6 +13,8 @@ interface Officer {
     content: string;
     coverImage?: string;
     slug?: string;
+    name: string;
+    major: string;
     [key: string]: unknown;
   }
 export default function officers()
@@ -72,7 +74,6 @@ export default function officers()
             return () => {
                 emblaApi.off("select", onSelect); // return full-opacity'd image
             };
-            emblaApi?.on("select")
         }, [emblaApi]);
 
         const components = {
@@ -109,11 +110,6 @@ export default function officers()
             if (officers.length === 0) {
                 return <p className="text-center">Officer info not found</p>;
             }
-            const selectedOfficer = officers[selectedImage]; // Get the selected officer
-            const contentWithTab = selectedOfficer?.content.replace(
-                "Major",
-                "&emsp;Major"
-            ); 
             return (
                 <div>
                     <AnimatedContent uniqueKey={officers.slug || selectedImage}>
@@ -121,7 +117,7 @@ export default function officers()
                             remarkPlugins={[remarkGfm]}
                             components={components}
                         >
-                            {contentWithTab || ""}
+                            {officers.name}
                         </ReactMarkdown>
                     </AnimatedContent>
                 </div>
