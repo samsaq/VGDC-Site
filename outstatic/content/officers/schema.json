@@ -8,6 +8,13 @@
       "fieldType": "String",
       "dataType": "string",
       "title": "Name"
+    },
+    "major": {
+      "required": true,
+      "description": "Name of Major",
+      "fieldType": "String",
+      "dataType": "string",
+      "title": "Major"
     }
   }
 }
