@@ -1,6 +1,6 @@
 {
-  "commit": "1c7d34e2ff7455137032f38eb22ac8b31f0df18b",
-  "generated": "2025-05-08T07:08:59.209Z",
+  "commit": "d966781a706863898cc4ebbda6bfe7f0baa836b5",
+  "generated": "2025-07-22T22:20:49.194Z",
   "metadata": [
     {
       "__outstatic": {
@@ -112,34 +112,6 @@
     },
     {
       "__outstatic": {
-        "commit": "e550139b3656dbadeabfe467ffcb4059b7a1d161",
-        "hash": "3809443896",
-        "path": "outstatic/content/about/who-we-are.md"
-      },
-      "author": {
-        "name": "Alvin Ton",
-        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
-      },
-      "collection": "about",
-      "contentA": "",
-      "coverImage": "/images/filler-image-cwNT.jpg",
-      "description": "About page for VGDC",
-      "headingA": "Heading 1",
-      "publishedAt": "2025-04-11T15:51:36.000Z",
-      "slug": "who-we-are",
-      "status": "published",
-      "subHeaderA": "Heading A",
-      "subbheaderB": [
-        {
-          "label": "subheaderA",
-          "value": "subheaderA"
-        }
-      ],
-      "subheaderA": "this is a test",
-      "title": "Who we are"
-    },
-    {
-      "__outstatic": {
         "commit": "41e49792cb14c64ee6199295bebd40d3df572ffe",
         "hash": "2286945805",
         "path": "outstatic/content/games/game-mcgamerson.md"
@@ -215,6 +187,34 @@
       "slug": "officer-3",
       "status": "published",
       "title": "Officer 3"
+    },
+    {
+      "__outstatic": {
+        "commit": "d966781a706863898cc4ebbda6bfe7f0baa836b5",
+        "hash": "1610307909",
+        "path": "outstatic/content/about/who-we-are.md"
+      },
+      "author": {
+        "name": "Alvin Ton",
+        "picture": "https://avatars.githubusercontent.com/u/157676125?v=4"
+      },
+      "collection": "about",
+      "contentA": "",
+      "coverImage": "/images/filler-image-cwNT.jpg",
+      "description": "About page for VGDC",
+      "headingA": "Heading 1",
+      "publishedAt": "2025-04-11T15:51:36.000Z",
+      "slug": "who-we-are",
+      "status": "published",
+      "subHeaderA": "Heading A",
+      "subbheaderB": [
+        {
+          "label": "subheaderA",
+          "value": "subheaderA"
+        }
+      ],
+      "subheaderA": "this is a test",
+      "title": "Who we are"
     }
   ]
 }
