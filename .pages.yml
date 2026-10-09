@@ -1,0 +1,90 @@
+# Pages CMS configuration (https://pagescms.org/docs/configuration/)
+# Paths are relative to the repository root.
+# All collections share the same fields, defined once on the About entry
+# (&entry_fields) and reused below with a YAML alias (*entry_fields).
+
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: about
+    label: About page
+    type: file
+    path: content/about/who-we-are.md
+    format: yaml-frontmatter
+    fields: &entry_fields
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: Slug
+        type: string
+        description: URL-friendly id, e.g. "my-game". Also used as the filename.
+      - name: status
+        label: Status
+        type: select
+        default: published
+        options:
+          values:
+            - name: published
+              label: Published
+            - name: draft
+              label: Draft
+      - name: description
+        label: Description
+        type: text
+      - name: coverImage
+        label: Cover image
+        type: image
+      - name: publishedAt
+        label: Published at
+        type: date
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          format: markdown
+
+  - name: games
+    label: Games
+    type: collection
+    path: content/games
+    format: yaml-frontmatter
+    filename: "{fields.slug}.md"
+    exclude: [".gitkeep"]
+    view:
+      primary: title
+      fields: [title, status, publishedAt]
+      sort: publishedAt
+      order: desc
+    fields: *entry_fields
+
+  - name: teams
+    label: Teams
+    type: collection
+    path: content/teams
+    format: yaml-frontmatter
+    filename: "{fields.slug}.md"
+    exclude: [".gitkeep"]
+    view:
+      primary: title
+      fields: [title, status]
+      sort: title
+    fields: *entry_fields
+
+  - name: officers
+    label: Officers
+    type: collection
+    path: content/officers
+    format: yaml-frontmatter
+    filename: "{fields.slug}.md"
+    exclude: [".gitkeep"]
+    view:
+      primary: title
+      fields: [title, status]
+    fields: *entry_fields

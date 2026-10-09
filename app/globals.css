@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Variants used by shadcn/ui components (normally from the `shadcn` package's
+   tailwind.css — inlined so the CLI isn't a dependency). */
+@custom-variant data-open {
+  &:where([data-state="open"]),
+  &:where([data-open]:not([data-open="false"])) {
+    @slot;
+  }
+}
+
+@custom-variant data-closed {
+  &:where([data-state="closed"]),
+  &:where([data-closed]:not([data-closed="false"])) {
+    @slot;
+  }
+}
+
+/* VGDC Logo Themed Colors
+   Jasper Red = #DB504A, Hunyadi Yellow = #FEB95F, Rich Black = #011627,
+   Marian Blue = #2B4593, Light Sea Green = #2EC4B6, Cerulean Blue = #337CA0
+   "-alternative" shades are sampled from the logo SVGs.
+   The site is light-only; background/foreground match what the old NextUI
+   theme actually rendered (white / #11181C). */
+:root {
+  --background: #ffffff;
+  --foreground: #11181c;
+  --primary: #feb95f;
+  --primary-foreground: #011627;
+  --primary-alternative: #ea9232;
+  --secondary: #2b4593;
+  --secondary-foreground: #ffffff;
+  --secondary-alternative: #747474;
+  --success: #2ec4b6;
+  --success-alternative: #90c3a4;
+  --warning: #337ca0;
+  --warning-alternative: #3f746e;
+  --danger: #db504a;
+  --danger-alternative: #e1432a;
+
+  /* shadcn/ui tokens */
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --accent: #f4f4f5;
+  --accent-foreground: var(--foreground);
+  --destructive: var(--danger);
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #a1a1aa;
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-alternative: var(--primary-alternative);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-alternative: var(--secondary-alternative);
+  --color-success: var(--success);
+  --color-success-alternative: var(--success-alternative);
+  --color-warning: var(--warning);
+  --color-warning-alternative: var(--warning-alternative);
+  --color-danger: var(--danger);
+  --color-danger-alternative: var(--danger-alternative);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-fira-code);
+  --font-outfit: var(--font-outfit);
+  --font-poppins: var(--font-poppins);
+  --font-heading: var(--font-outfit);
+
+  --animate-scrolling-bg: scroll 10s linear infinite;
+
+  @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-600px);
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+}
+
+/* Instagram icon: swap outline for gradient version on hover */
+.instagram-hover {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+.instagram-hover svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.instagram-hover svg:first-child {
+  opacity: 1;
+}
+
+.instagram-hover svg.gradient-icon {
+  opacity: 0;
+}
+
+.instagram-hover:hover svg:first-child {
+  opacity: 0;
+}
+
+.instagram-hover:hover svg.gradient-icon {
+  opacity: 1;
+}
