@@ -1,0 +1,16 @@
+*Home Page*
+1. Links need fixing (discord, need perms or someone else to make me a permanent link)
+
+*Officers Page*
+Removed for an events page / officers integrated into teams page remake
+
+*Events Page*
+List meeting times, workshop dates
+Maybe a calendar UI?
+
+*Teams Page*
+Swapped for a Pathways/Specializations page
+ - Has an intro to each archetype, plus the specialization officer with their profile pic/bio
+ 
+*Games Page*
+Altered in form to show of each gamejam game, with latest on the carousel, and a way to select jams chronologically

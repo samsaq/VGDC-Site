@@ -13,8 +13,8 @@ export const siteConfig = {
       bg: "bg-danger-alternative",
     },
     {
-      label: "Officers",
-      href: "/officers",
+      label: "Events",
+      href: "/events",
       text: "text-primary-alternative",
       hoverText: "hover:text-primary-alternative",
       bg: "bg-primary-alternative",
