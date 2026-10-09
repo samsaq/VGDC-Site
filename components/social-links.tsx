@@ -96,17 +96,6 @@ export function SocialLinks() {
           </svg>
         </span>
       </a>
-
-      <a
-        href={siteConfig.links.x}
-        aria-label="X (Twitter)"
-        className={linkClass}
-      >
-        <Icon
-          icon="ri:twitter-x-fill"
-          className="transition-colors duration-300 hover:text-black"
-        />
-      </a>
     </div>
   );
 }

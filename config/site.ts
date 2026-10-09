@@ -35,7 +35,7 @@ export const siteConfig = {
     },
   ],
   links: {
-    engage: "https://asu.campuslabs.com/engage/organization/vgdc",
+    engage: "https://sundevilcentral.eoss.asu.edu/vgdc/home/",
     discord: "https://discord.gg/vgdcasu",
     instagram: "https://www.instagram.com/heatwavestudioaz/",
     x: "https://x.com/HeatwaveAZ",
