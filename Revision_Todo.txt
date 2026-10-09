@@ -6,11 +6,12 @@ Removed for an events page / officers integrated into teams page remake
 
 *Events Page*
 List meeting times, workshop dates
-Maybe a calendar UI?
+Maybe a calendar UI, pulling from either google calendar or from discord announcements?
 
 *Teams Page*
 Swapped for a Pathways/Specializations page
- - Has an intro to each archetype, plus the specialization officer with their profile pic/bio
+ - Has an intro to each archetype, plus the pathway's officer with their profile pic/bio
  
 *Games Page*
 Altered in form to show of each gamejam game, with latest on the carousel, and a way to select jams chronologically
+Eg: a sidebar sorted chronologically with newer gamejams on top on the side, and selecting on fills the carousel with the games of that jam, defaulting to latest
