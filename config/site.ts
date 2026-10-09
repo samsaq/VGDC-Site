@@ -20,8 +20,8 @@ export const siteConfig = {
       bg: "bg-primary-alternative",
     },
     {
-      label: "Teams",
-      href: "/teams",
+      label: "Pathways",
+      href: "/pathways",
       text: "text-warning-alternative",
       hoverText: "hover:text-[#5ba8a0]",
       bg: "bg-warning-alternative",
@@ -36,7 +36,7 @@ export const siteConfig = {
   ],
   links: {
     engage: "https://sundevilcentral.eoss.asu.edu/vgdc/home/",
-    discord: "https://discord.gg/vgdcasu",
+    discord: "https://discord.gg/YgRBPxBaNB",
     instagram: "https://www.instagram.com/heatwavestudioaz/",
     x: "https://x.com/HeatwaveAZ",
   },
