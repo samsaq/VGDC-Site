@@ -56,12 +56,19 @@ export function useDotButton(
 
     onInit(emblaApi);
     onSelect(emblaApi);
-    emblaApi.on("init", onInit).on("reInit", onInit).on("select", onSelect);
+    // reInit (e.g. the slides changed) can move the selection without a
+    // select event, so re-read it there too.
+    emblaApi
+      .on("init", onInit)
+      .on("reInit", onInit)
+      .on("reInit", onSelect)
+      .on("select", onSelect);
 
     return () => {
       emblaApi
         .off("init", onInit)
         .off("reInit", onInit)
+        .off("reInit", onSelect)
         .off("select", onSelect);
     };
   }, [emblaApi]);

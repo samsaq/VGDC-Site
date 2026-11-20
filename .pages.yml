@@ -1,7 +1,8 @@
 # Pages CMS configuration (https://pagescms.org/docs/configuration/)
 # Paths are relative to the repository root.
 # All collections share the same fields, defined once on the About entry
-# (&entry_fields) and reused below with a YAML alias (*entry_fields).
+# (&entry_fields) and reused below with a YAML alias (*entry_fields). Each
+# field also has its own anchor so Games can reuse them and add a Jam field.
 
 media:
   input: public/images
@@ -14,15 +15,18 @@ content:
     path: content/about/who-we-are.md
     format: yaml-frontmatter
     fields: &entry_fields
-      - name: title
+      - &title_field
+        name: title
         label: Title
         type: string
         required: true
-      - name: slug
+      - &slug_field
+        name: slug
         label: Slug
         type: string
         description: URL-friendly id, e.g. "my-game". Also used as the filename.
-      - name: status
+      - &status_field
+        name: status
         label: Status
         type: select
         default: published
@@ -32,19 +36,23 @@ content:
               label: Published
             - name: draft
               label: Draft
-      - name: description
+      - &description_field
+        name: description
         label: Description
         type: text
-      - name: coverImage
+      - &cover_image_field
+        name: coverImage
         label: Cover image
         type: image
-      - name: publishedAt
+      - &published_at_field
+        name: publishedAt
         label: Published at
         type: date
         options:
           time: true
           format: "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"
-      - name: body
+      - &body_field
+        name: body
         label: Body
         type: rich-text
         options:
@@ -59,10 +67,25 @@ content:
     exclude: [".gitkeep"]
     view:
       primary: title
-      fields: [title, status, publishedAt]
+      fields: [title, jam, status, publishedAt]
       sort: publishedAt
       order: desc
-    fields: *entry_fields
+    fields:
+      - *title_field
+      - *slug_field
+      - *status_field
+      - name: jam
+        label: Jam
+        type: string
+        description: >-
+          The jam this game was made in, e.g. "October Jam". Spell it exactly
+          like the other games from that jam, since games are grouped by this
+          name. "Published at" sets which year it is listed under. Leave
+          blank for games not made in a jam.
+      - *description_field
+      - *cover_image_field
+      - *published_at_field
+      - *body_field
 
   - name: teams
     label: Teams

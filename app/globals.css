@@ -17,6 +17,43 @@
   }
 }
 
+/* Layout variants for putting content beside media (e.g. the games carousel
+   and its description). Based on shape, not just width, so foldables work:
+
+   wide:       side by side. Unfolded foldables (about 1:1 to 4:3), tablets in
+               landscape, landscape phones and desktops. Tall portrait screens
+               stack. Raise the 4/5 (e.g. to 1/1) to stack on more devices.
+   widescreen: clearly wider than tall (desktops, landscape phones). Below
+               this, `wide:` screens are near-square, which on an unfolded
+               foldable means the fold runs down the middle, so pages split
+               them 50/50 to keep each panel on one half.
+   fold-x / fold-y: the browser reports a hinge (Viewport Segments API: the
+               device is half-folded, or a dual-screen device), side by side or
+               top/bottom. --fold-hinge is the hinge's size, and --fold-second
+               the size of the right or bottom screen half, so a panel can be
+               sized to exactly fill that half. */
+@custom-variant wide (@media (width >= 40rem) and (aspect-ratio >= 4/5));
+@custom-variant widescreen (@media (width >= 40rem) and (aspect-ratio >= 3/2));
+@custom-variant fold-x (@media (horizontal-viewport-segments: 2));
+@custom-variant fold-y (@media (vertical-viewport-segments: 2));
+
+@media (horizontal-viewport-segments: 2) {
+  :root {
+    --fold-hinge: calc(
+      env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0)
+    );
+    --fold-second: env(viewport-segment-width 1 0);
+  }
+}
+@media (vertical-viewport-segments: 2) {
+  :root {
+    --fold-hinge: calc(
+      env(viewport-segment-top 0 1) - env(viewport-segment-bottom 0 0)
+    );
+    --fold-second: env(viewport-segment-height 0 1);
+  }
+}
+
 /* VGDC Logo Themed Colors
    Jasper Red = #DB504A, Hunyadi Yellow = #FEB95F, Rich Black = #011627,
    Marian Blue = #2B4593, Light Sea Green = #2EC4B6, Cerulean Blue = #337CA0

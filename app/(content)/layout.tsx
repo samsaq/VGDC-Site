@@ -8,7 +8,7 @@ export default function ContentLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex h-dvh flex-col">
       <Navbar />
       <div className="flex-1 overflow-hidden">{children}</div>
     </div>

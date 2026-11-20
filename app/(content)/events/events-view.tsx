@@ -2,8 +2,15 @@
 
 import { Suspense, useMemo, useState, useSyncExternalStore } from "react";
 import type { DayButtonProps } from "react-day-picker";
-import { CalendarPlusIcon, ClockIcon, MapPinIcon } from "lucide-react";
+import {
+  CalendarDaysIcon,
+  CalendarPlusIcon,
+  ClockIcon,
+  ListIcon,
+  MapPinIcon,
+} from "lucide-react";
 import { AnimatedContent } from "@/components/animated-content";
+import { Button } from "@/components/ui/button";
 import { Calendar, CalendarDayButton } from "@/components/ui/calendar";
 import { siteConfig } from "@/config/site";
 import type { CalendarEvent } from "@/lib/calendar";
@@ -63,7 +70,11 @@ export function EventsView({
   fetchedOn: string;
 }) {
   const today = useToday(fetchedOn);
-  const [selectedDay, setSelectedDay] = useState<string | null>(null);
+  // Most days have no events, so the list opens on upcoming. The picked day is
+  // kept separately so "Show daily" returns to it (or today if none picked).
+  const [view, setView] = useState<"upcoming" | "day">("upcoming");
+  const [pickedDay, setPickedDay] = useState<string | null>(null);
+  const selectedDay = view === "day" ? (pickedDay ?? today) : null;
   const [month, setMonth] = useState<Date | null>(null);
 
   const eventsByDay = useMemo(() => {
@@ -117,7 +128,10 @@ export function EventsView({
               month={month ?? keyToDate(today)}
               onMonthChange={setMonth}
               selected={selectedDay ? keyToDate(selectedDay) : undefined}
-              onSelect={(date) => setSelectedDay(date ? dayKey(date) : null)}
+              onSelect={(date) => {
+                if (date) setPickedDay(dayKey(date));
+                setView(date ? "day" : "upcoming");
+              }}
               modifiers={modifiers}
               components={{ DayButton: EventDayButton }}
               className="rounded-xl border p-3 shadow-sm [--cell-size:--spacing(10)] sm:[--cell-size:--spacing(12)]"
@@ -144,21 +158,24 @@ export function EventsView({
         </div>
 
         <div className="flex-1 font-outfit">
-          <div className="mb-4 flex items-baseline justify-between gap-4">
+          <div className="mb-4 flex flex-col items-start gap-3">
             <h2 className="text-2xl font-semibold">
               {selectedDay
                 ? longDayFormat.format(keyToDate(selectedDay))
                 : "Upcoming"}
             </h2>
-            {selectedDay && (
-              <button
-                type="button"
-                onClick={() => setSelectedDay(null)}
-                className="text-sm text-muted-foreground transition-colors hover:text-primary-alternative"
-              >
-                Show upcoming
-              </button>
-            )}
+            <Button
+              variant="outline"
+              onClick={() => setView(selectedDay ? "upcoming" : "day")}
+              className="font-outfit hover:border-primary-alternative hover:text-primary-alternative"
+            >
+              {selectedDay ? (
+                <ListIcon data-icon="inline-start" />
+              ) : (
+                <CalendarDaysIcon data-icon="inline-start" />
+              )}
+              {selectedDay ? "Show upcoming" : "Show daily"}
+            </Button>
           </div>
 
           <AnimatedContent uniqueKey={selectedDay ?? "upcoming"}>

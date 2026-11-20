@@ -1,6 +1,7 @@
 ---
 title: 'Another Game'
 status: 'published'
+jam: 'Spring Jam'
 author:
   name: 'samsaq'
   picture: 'https://avatars.githubusercontent.com/u/8010506?v=4'

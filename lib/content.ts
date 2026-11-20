@@ -17,6 +17,8 @@ export interface Entry {
   description?: string;
   coverImage?: string;
   publishedAt?: string;
+  /** Games only: the jam the game was made in. */
+  jam?: string;
   body: string;
 }
 
@@ -33,6 +35,7 @@ function parseEntry(file: string, raw: string): Entry | null {
     description: data.description || undefined,
     coverImage: data.coverImage || undefined,
     publishedAt: data.publishedAt ? String(data.publishedAt) : undefined,
+    jam: data.jam ? String(data.jam).trim() : undefined,
     body: match ? raw.slice(match[0].length) : raw,
   };
 }

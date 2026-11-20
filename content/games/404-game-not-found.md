@@ -1,9 +1,14 @@
 ---
-title: 404 Game not found
-slug: 404-game-not-found
-status: published
-coverImage: /images/onslaught_alignment_chart-AxNT.png
-publishedAt: 2025-05-02T16:53:00.000+00:00
+title: '404 Game not found'
+status: 'published'
+jam: 'May Jam'
+author:
+  name: 'samsaq'
+  picture: 'https://avatars.githubusercontent.com/u/8010506?v=4'
+slug: '404-game-not-found'
+description: ''
+coverImage: '/images/onslaught_alignment_chart-AxNT.png'
+publishedAt: '2025-05-02T16:53:04.781Z'
 ---
 I'm *spiraling downwards* in my search for filler content
 

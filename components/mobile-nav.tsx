@@ -11,7 +11,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-export function MobileNav() {
+export function MobileNav({ activeHref }: { activeHref?: string }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -27,9 +27,15 @@ export function MobileNav() {
               <Link
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className={`text-lg ${item.text}`}
+                aria-current={item.href === activeHref ? "page" : undefined}
+                className={`relative text-lg ${item.text}`}
               >
                 {item.label}
+                {item.href === activeHref && (
+                  <span
+                    className={`absolute -bottom-1 left-0 h-1 w-full ${item.bg}`}
+                  />
+                )}
               </Link>
             </li>
           ))}
